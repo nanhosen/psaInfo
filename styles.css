@@ -1,0 +1,25 @@
+body {
+  background: #394533;
+  font-family: Montserrat;
+}
+
+.container-fluid {
+  /*padding-top: 3.75rem;*/
+  padding-top: 7rem;
+}
+
+#nav-bar {
+	background-color: #8C6E30;
+}
+
+#logo {
+	height: 4rem; 
+}
+
+#images {
+  display: none;
+}
+
+.card-bg {
+	background: #8C6E30
+}

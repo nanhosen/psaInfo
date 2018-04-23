@@ -1,0 +1,327 @@
+[{
+	"PSA": "GB01",
+	"name": "Payette",
+	"RAWS": {
+		"101044": "Lodgepole",
+		"101108": "Weiser",
+		"101109": "Snake",
+		"101220": "Teapot",
+		"101223": "Ski Hill",
+		"101224": "Taylor Ranch",
+		"101402": "Catfish"
+	}
+}, {
+	"PSA": "GB02",
+	"name": "Central Idaho",
+	"RAWS": {
+		"101303": "Indianola",
+		"101310": "Salmon",
+		"101311": "Skull",
+		"101312": "Leadore",
+		"101314": "Ezra",
+		"101315": "Kriley Creek",
+		"101316": "Red Rock Peak",
+		"101803": "Challis",
+		"101805": "Little Creek"
+	}
+}, {
+	"PSA": "GB03",
+	"name": "SW Idaho",
+	"RAWS": {
+		"102601": "Boise",
+		"102709": "Mountain Home",
+		"103207": "Brace Flat",
+		"103208": "Triangle",
+		"103210": "Pole Creek",
+		"103211": "Sho-Pai"
+	}
+}, {
+	"PSA": "GB04",
+	"name": "Boise Mtns",
+	"RAWS": {
+		"101222": "Pine Creek Pass",
+		"101708": "Town Creek",
+		"101710": "Little Anderson",
+		"102712": "Wagon Town"
+	}
+}, {
+	"PSA": "GB05",
+	"name": "Northern Sawtooth",
+	"RAWS": {
+		"101809": "Stanley Ranger",
+		"101812": "Horton Peak",
+		"102802": "Fleck Summit",
+		"102903": "North Fork"
+	}
+}, {
+	"PSA": "GB06",
+	"name": "Magic Valley",
+	"RAWS": {
+		"102711": "Deer Haven",
+		"102907": "Potter Butte",
+		"103205": "Horse Butte",
+		"103209": "Twin Butte",
+		"103403": "Rock Lake",
+		"104104": "Raft River"
+	}
+}, {
+	"PSA": "GB07",
+	"name": "Southern Sawtooth",
+	"RAWS": {
+		"104004": "Trail Gulch",
+		"104006": "Bull Springs",
+		"104103": "Moberg Canyon",
+		"104105": "Goose Creek"
+	}
+}, {
+	"PSA": "GB08",
+	"name": "Upper Snake River",
+	"RAWS": {
+		"103703": "Crystal",
+		"103902": "Grace",
+		"103903": "Pole Canyon",
+		"104006": "Bull Springs",
+		"104203": "Flint Creek"
+	}
+}, {
+	"PSA": "GB09",
+	"name": "Eastern Idaho Highlands",
+	"RAWS": {
+		"102004": "3 Mile",
+		"102301": "Moody",
+		"103904": "Diamond Flat"
+	}
+}, {
+	"PSA": "GB10",
+	"name": "Western Wyoming",
+	"RAWS": {
+		"100708": "Kelly",
+		"480707": "Burro Hill",
+		"480708": "Grand Teton",
+		"480709": "Coyote Meadows",
+		"481302": "Hoback",
+		"481306": "Snider Basin",
+		"481307": "Raspberry"
+	}
+}, {
+	"PSA": "GB11",
+	"name": "Southern Sierra Front",
+	"RAWS": {
+		"42802": "Markleville",
+		"43707": "Walker",
+		"260117": "Knox 2",
+		"437202": "Bridgeport"
+	}
+}, {
+	"PSA": "GB12",
+	"name": "Northern Sierra Front",
+	"RAWS": {
+		"40724": "Doyle",
+		"41302": "Dog Valley",
+		"260108": "Galena",
+		"260114": "Desert Springs",
+		"261204": "Fish Springs"
+	}
+}, {
+	"PSA": "GB13",
+	"name": "Lahontan Basin",
+	"RAWS": {
+		"260504": "Red Butte",
+		"260701": "Dead Camel"
+	}
+}, {
+	"PSA": "GB14",
+	"name": "Northwest Nevada",
+	"RAWS": {
+		"260112": "Juniper Springs",
+		"260202": "Bluewing",
+		"260203": "Dry Canyon",
+		"260204": "Morey Creek",
+		"260206": "Texas Spring",
+		"260207": "Double H",
+		"260208": "Majuba",
+		"": "Buffalo Creek"
+	}
+}, {
+	"PSA": "GB15",
+	"name": "Central Nevada Mountains",
+	"RAWS": {
+		"260501": "Austin",
+		"260503": "Desatoya",
+		"260601": "Combs Canyon",
+		"260603": "Coils Creek"
+	}
+}, {
+	"PSA": "GB16",
+	"name": "Central Nevada Desert",
+	"RAWS": {
+		"260810": "Quima Peak",
+		"261404": "Pancake",
+		"261408": "Buddy Adams"
+	}
+}, {
+	"PSA": "GB17",
+	"name": "West Elko",
+	"RAWS": {
+		"260305": "Long Hollow",
+		"260310": "Antelope Lake",
+		"260505": "Beacon Light"
+	}
+}, {
+	"PSA": "GB18",
+	"name": "Jarbridge",
+	"RAWS": {
+		"260305": "Long Hollow",
+		"260309": "Rock Spring Creek",
+		"260315": "Stag Mountain"
+	}
+}, {
+	"PSA": "GB19",
+	"name": "Ruby",
+	"RAWS": {
+		"260306": "Spruce Mountain",
+		"260308": "Spring Gulch",
+		"260314": "Crane Springs"
+	}
+}, {
+	"PSA": "GB20",
+	"name": "Ely North",
+	"RAWS": {
+		"260804": "Alligator Ridge",
+		"260805": "Cedar Pass",
+		"260807": "Cattle Camp",
+		"261406": "Currant Creek"
+	}
+}, {
+	"PSA": "GB21",
+	"name": "Ely South",
+	"RAWS": {
+		"261603": "Coyote Wash",
+		"261604": "Kane Springs",
+		"261608": "Immigration Wash"
+	}
+}, {
+	"PSA": "GB22",
+	"name": "Amargosa",
+	"RAWS": {
+		"261408": "Buddy Adams"
+	}
+}, {
+	"PSA": "GB23",
+	"name": "Spring Mountain",
+	"RAWS": {
+		"261702": "Kyle Canyon",
+		"261708": "Mountain Springs"
+	}
+}, {
+	"PSA": "GB24",
+	"name": "Southern Nevada Desert",
+	"RAWS": {
+		"101316": "Red Rock"
+	}
+}, {
+	"PSA": "GB25",
+	"name": "Northwest Utah",
+	"RAWS": {
+		"420403": "Bues Canyon",
+		"420901": "Cedar Mountain",
+		"420908": "Vernon",
+		"420911": "Aragonite",
+		"420914": "Rosebud",
+		"420915": "Clifton Flat",
+		"421101": "Pleasant Grove"
+	}
+}, {
+	"PSA": "GB26",
+	"name": "Uinta-Wasatch",
+	"RAWS": {
+		"420706": "Norway Flat",
+		"420912": "Otter Creek",
+		"421101": "Pleasant Grove",
+		"421103": "Rays Valley"
+	}
+}, {
+	"PSA": "GB27",
+	"name": "Central Utah",
+	"RAWS": {
+		"421501": "Sevier Reservoir",
+		"421502": "Mud Spring",
+		"421806": "Tule Valley"
+	}
+}, {
+	"PSA": "GB28",
+	"name": "Fishlake-Henry Mountain",
+	"RAWS": {
+		"421807": "Horse Hollow",
+		"421905": "Lost Creek",
+		"422610": "Larb Hollow",
+		"422611": "Henry Mountain"
+	}
+}, {
+	"PSA": "GB29",
+	"name": "Uinta Basin",
+	"RAWS": {
+		"421301": "Yellowstone",
+		"421304": "Five Mile",
+		"421305": "Horse Ridge",
+		"421406": "Upper PR Canyon",
+		"421407": "Winter Ridge",
+		"421415": "Fort Duchesne",
+		"421416": "Wildhorse"
+	}
+}, {
+	"PSA": "GB30",
+	"name": "Manti",
+	"RAWS": {
+		"421602": "Joes Valley"
+	}
+}, {
+	"PSA": "GB31",
+	"name": "Castle",
+	"RAWS": {
+		"421405": "McCook",
+		"421702": "Bruin Point",
+		"422002": "Flat Top",
+		"422102": "Bryson"
+	}
+}, {
+	"PSA": "GB32",
+	"name": "Canyon",
+	"RAWS": {
+		"422710": "North Long Point",
+		"422711": "Big Indian",
+		"422712": "Kane Gulch"
+	}
+}, {
+	"PSA": "GB33",
+	"name": "Southwest Utah Desert",
+	"RAWS": {
+		"422203": "Brimstone",
+		"422502": "Jensen Spring",
+		"422803": "Enterprise"
+	}
+}, {
+	"PSA": "GB34",
+	"name": "Dixie-Bryce",
+	"RAWS": {
+		"422503": "Cottonwood",
+		"422604": "Assay Bench",
+		"422606": "Buck Flat",
+		"422608": "Tom Best",
+		"422609": "Bryce Canyon",
+		"422807": "Lava Point"
+	}
+}, {
+	"PSA": "GB35",
+	"name": "Arizona Strip/Monuments",
+	"RAWS": {
+		"20107": "Logan",
+		"20108": "Olaf",
+		"20109": "Tweedy",
+		"20114": "Blackrock",
+		"20223": "Gunsight",
+		"422805": "White Reef",
+		"422806": "Badger Spring",
+		"": "Buckskin"
+	}
+}]
