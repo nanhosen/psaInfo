@@ -2340,13 +2340,46 @@ var rawsPercentiles = {
 
   // var k = 
   var newAr = []
+  var rawsGeoJSON = {
+        'type': 'FeatureCollection',
+        'crs': {
+          'type': 'name',
+          'properties': {
+            'name': 'EPSG:4326'
+          }
+        },
+        'features': []
+      };
+  console.log(rawsGeoJSON.features)
   var f = rawsPercentiles.RAWS;
-  // f.map((curr)=>{
-  // 	var arPush = {
-  // 		curr.id + ':' 
+  f.map((curr)=>{
+  	var lat = curr.lat;
+  	var lon = curr.lon;
+  	var arPush = {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [lon, lat], //these are in 4326
+            'properties' : {
+					    "name":curr.name,
+					    "id":curr.id,
+					    "highest":curr.highest,
+					    "p97":curr.p97,
+					    "p90":curr.p90,
+					    "p80":curr.p80,
+					    "p70":curr.p70,
+					    "p50":curr.p50
+					  }
+            // 'coordinates': [-114.926, 44.169] //these are in 4326
+            // 'coordinates': [[-114.926, 44.169],[-115.327,43.573]] 
+            // 'coordinates': [-12793503.80, 5491632.68] //these are converted to 3857
+          }
+        }
+    rawsGeoJSON.features.push(arPush)
 
-  // 	}
-  // })
+  })
+  console.log(JSON.stringify(rawsGeoJSON))
+
 
  psaRawsInfo.map((curr)=>{
   	var gbInfo = curr;
@@ -2377,7 +2410,7 @@ var rawsPercentiles = {
   	}
   })
   // console.log(psaRawsInfo[1].RAWS[101314])
-  console.log(JSON.stringify(psaRawsInfo))
+  // console.log(JSON.stringify(psaRawsInfo))
   // psaRawsInfo.map((curr)=>{console.log(curr)})
 
   
