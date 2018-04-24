@@ -2360,7 +2360,11 @@ var rawsPercentiles = {
           'geometry': {
             'type': 'Point',
             'coordinates': [lon, lat], //these are in 4326
-            'properties' : {
+            // 'coordinates': [-114.926, 44.169] //these are in 4326
+            // 'coordinates': [[-114.926, 44.169],[-115.327,43.573]] 
+            // 'coordinates': [-12793503.80, 5491632.68] //these are converted to 3857
+          },
+          'properties' : {
 					    "name":curr.name,
 					    "id":curr.id,
 					    "highest":curr.highest,
@@ -2370,10 +2374,6 @@ var rawsPercentiles = {
 					    "p70":curr.p70,
 					    "p50":curr.p50
 					  }
-            // 'coordinates': [-114.926, 44.169] //these are in 4326
-            // 'coordinates': [[-114.926, 44.169],[-115.327,43.573]] 
-            // 'coordinates': [-12793503.80, 5491632.68] //these are converted to 3857
-          }
         }
     rawsGeoJSON.features.push(arPush)
 
