@@ -10,7 +10,7 @@ var psaRawsInfo = [{
 		"101224": "Taylor Ranch",
 		"101402": "Catfish"
 	}
-}, {
+	}, {
 	"PSA": "GB02",
 	"name": "Central Idaho",
 	"RAWS": {
@@ -24,7 +24,7 @@ var psaRawsInfo = [{
 		"101803": "Challis",
 		"101805": "Little Creek"
 	}
-}, {
+	}, {
 	"PSA": "GB03",
 	"name": "SW Idaho",
 	"RAWS": {
@@ -35,7 +35,7 @@ var psaRawsInfo = [{
 		"103210": "Pole Creek",
 		"103211": "Sho-Pai"
 	}
-}, {
+	}, {
 	"PSA": "GB04",
 	"name": "Boise Mtns",
 	"RAWS": {
@@ -44,7 +44,7 @@ var psaRawsInfo = [{
 		"101710": "Little Anderson",
 		"102712": "Wagon Town"
 	}
-}, {
+	}, {
 	"PSA": "GB05",
 	"name": "Northern Sawtooth",
 	"RAWS": {
@@ -53,7 +53,7 @@ var psaRawsInfo = [{
 		"102802": "Fleck Summit",
 		"102903": "North Fork"
 	}
-}, {
+	}, {
 	"PSA": "GB06",
 	"name": "Magic Valley",
 	"RAWS": {
@@ -64,7 +64,7 @@ var psaRawsInfo = [{
 		"103403": "Rock Lake",
 		"104104": "Raft River"
 	}
-}, {
+	}, {
 	"PSA": "GB07",
 	"name": "Southern Sawtooth",
 	"RAWS": {
@@ -73,7 +73,7 @@ var psaRawsInfo = [{
 		"104103": "Moberg Canyon",
 		"104105": "Goose Creek"
 	}
-}, {
+	}, {
 	"PSA": "GB08",
 	"name": "Upper Snake River",
 	"RAWS": {
@@ -83,7 +83,7 @@ var psaRawsInfo = [{
 		"104006": "Bull Springs",
 		"104203": "Flint Creek"
 	}
-}, {
+	}, {
 	"PSA": "GB09",
 	"name": "Eastern Idaho Highlands",
 	"RAWS": {
@@ -91,7 +91,7 @@ var psaRawsInfo = [{
 		"102301": "Moody",
 		"103904": "Diamond Flat"
 	}
-}, {
+	}, {
 	"PSA": "GB10",
 	"name": "Western Wyoming",
 	"RAWS": {
@@ -103,7 +103,7 @@ var psaRawsInfo = [{
 		"481306": "Snider Basin",
 		"481307": "Raspberry"
 	}
-}, {
+	}, {
 	"PSA": "GB11",
 	"name": "Southern Sierra Front",
 	"RAWS": {
@@ -112,7 +112,7 @@ var psaRawsInfo = [{
 		"260117": "Knox 2",
 		"437202": "Bridgeport"
 	}
-}, {
+	}, {
 	"PSA": "GB12",
 	"name": "Northern Sierra Front",
 	"RAWS": {
@@ -122,14 +122,14 @@ var psaRawsInfo = [{
 		"260114": "Desert Springs",
 		"261204": "Fish Springs"
 	}
-}, {
+	}, {
 	"PSA": "GB13",
 	"name": "Lahontan Basin",
 	"RAWS": {
 		"260504": "Red Butte",
 		"260701": "Dead Camel"
 	}
-}, {
+	}, {
 	"PSA": "GB14",
 	"name": "Northwest Nevada",
 	"RAWS": {
@@ -142,7 +142,7 @@ var psaRawsInfo = [{
 		"260208": "Majuba",
 		"": "Buffalo Creek"
 	}
-}, {
+	}, {
 	"PSA": "GB15",
 	"name": "Central Nevada Mountains",
 	"RAWS": {
@@ -151,7 +151,7 @@ var psaRawsInfo = [{
 		"260601": "Combs Canyon",
 		"260603": "Coils Creek"
 	}
-}, {
+	}, {
 	"PSA": "GB16",
 	"name": "Central Nevada Desert",
 	"RAWS": {
@@ -159,7 +159,7 @@ var psaRawsInfo = [{
 		"261404": "Pancake",
 		"261408": "Buddy Adams"
 	}
-}, {
+	}, {
 	"PSA": "GB17",
 	"name": "West Elko",
 	"RAWS": {
@@ -167,7 +167,7 @@ var psaRawsInfo = [{
 		"260310": "Antelope Lake",
 		"260505": "Beacon Light"
 	}
-}, {
+	}, {
 	"PSA": "GB18",
 	"name": "Jarbridge",
 	"RAWS": {
@@ -175,7 +175,7 @@ var psaRawsInfo = [{
 		"260309": "Rock Spring Creek",
 		"260315": "Stag Mountain"
 	}
-}, {
+	}, {
 	"PSA": "GB19",
 	"name": "Ruby",
 	"RAWS": {
@@ -183,7 +183,7 @@ var psaRawsInfo = [{
 		"260308": "Spring Gulch",
 		"260314": "Crane Springs"
 	}
-}, {
+	}, {
 	"PSA": "GB20",
 	"name": "Ely North",
 	"RAWS": {
@@ -192,7 +192,7 @@ var psaRawsInfo = [{
 		"260807": "Cattle Camp",
 		"261406": "Currant Creek"
 	}
-}, {
+	}, {
 	"PSA": "GB21",
 	"name": "Ely South",
 	"RAWS": {
@@ -200,26 +200,26 @@ var psaRawsInfo = [{
 		"261604": "Kane Springs",
 		"261608": "Immigration Wash"
 	}
-}, {
+	}, {
 	"PSA": "GB22",
 	"name": "Amargosa",
 	"RAWS": {
 		"261408": "Buddy Adams"
 	}
-}, {
+	}, {
 	"PSA": "GB23",
 	"name": "Spring Mountain",
 	"RAWS": {
 		"261702": "Kyle Canyon",
 		"261708": "Mountain Springs"
 	}
-}, {
+	}, {
 	"PSA": "GB24",
 	"name": "Southern Nevada Desert",
 	"RAWS": {
 		"101316": "Red Rock"
 	}
-}, {
+	}, {
 	"PSA": "GB25",
 	"name": "Northwest Utah",
 	"RAWS": {
@@ -231,7 +231,7 @@ var psaRawsInfo = [{
 		"420915": "Clifton Flat",
 		"421101": "Pleasant Grove"
 	}
-}, {
+	}, {
 	"PSA": "GB26",
 	"name": "Uinta-Wasatch",
 	"RAWS": {
@@ -240,7 +240,7 @@ var psaRawsInfo = [{
 		"421101": "Pleasant Grove",
 		"421103": "Rays Valley"
 	}
-}, {
+	}, {
 	"PSA": "GB27",
 	"name": "Central Utah",
 	"RAWS": {
@@ -248,7 +248,7 @@ var psaRawsInfo = [{
 		"421502": "Mud Spring",
 		"421806": "Tule Valley"
 	}
-}, {
+	}, {
 	"PSA": "GB28",
 	"name": "Fishlake-Henry Mountain",
 	"RAWS": {
@@ -257,7 +257,7 @@ var psaRawsInfo = [{
 		"422610": "Larb Hollow",
 		"422611": "Henry Mountain"
 	}
-}, {
+	}, {
 	"PSA": "GB29",
 	"name": "Uinta Basin",
 	"RAWS": {
@@ -269,13 +269,13 @@ var psaRawsInfo = [{
 		"421415": "Fort Duchesne",
 		"421416": "Wildhorse"
 	}
-}, {
+	}, {
 	"PSA": "GB30",
 	"name": "Manti",
 	"RAWS": {
 		"421602": "Joes Valley"
 	}
-}, {
+	}, {
 	"PSA": "GB31",
 	"name": "Castle",
 	"RAWS": {
@@ -284,7 +284,7 @@ var psaRawsInfo = [{
 		"422002": "Flat Top",
 		"422102": "Bryson"
 	}
-}, {
+	}, {
 	"PSA": "GB32",
 	"name": "Canyon",
 	"RAWS": {
@@ -292,7 +292,7 @@ var psaRawsInfo = [{
 		"422711": "Big Indian",
 		"422712": "Kane Gulch"
 	}
-}, {
+	}, {
 	"PSA": "GB33",
 	"name": "Southwest Utah Desert",
 	"RAWS": {
@@ -300,7 +300,7 @@ var psaRawsInfo = [{
 		"422502": "Jensen Spring",
 		"422803": "Enterprise"
 	}
-}, {
+	}, {
 	"PSA": "GB34",
 	"name": "Dixie-Bryce",
 	"RAWS": {
@@ -311,7 +311,7 @@ var psaRawsInfo = [{
 		"422609": "Bryce Canyon",
 		"422807": "Lava Point"
 	}
-}, {
+	}, {
 	"PSA": "GB35",
 	"name": "Arizona Strip/Monuments",
 	"RAWS": {
@@ -1556,18 +1556,6 @@ var rawsPercentiles = {
 		    "p50":96
 		  },
 		  {
-		    "name":"Oriental Wash",
-		    "lat":37.235,
-		    "lon":-117.496,
-		    "id":261502,
-		    "highest":127,
-		    "p97":118,
-		    "p90":114,
-		    "p80":111,
-		    "p70":109,
-		    "p50":106
-		  },
-		  {
 		    "name":"Coyote Wash",
 		    "lat":38.283,
 		    "lon":-114.758,
@@ -1770,6 +1758,18 @@ var rawsPercentiles = {
 		    "p80":88,
 		    "p70":85,
 		    "p50":80
+		  },
+		  {
+		    "name":"Quima Peak",
+		    "lat":38.4869444,
+		    "lon":-117.0950000,
+		    "id":260810,
+		    "highest":'',
+		    "p97":'',
+		    "p90":'',
+		    "p80":'',
+		    "p70":'',
+		    "p50":''
 		  },
 		  {
 		    "name":"Rays Valley",
@@ -6221,8 +6221,8 @@ var stnElevJson = [
     "wimsID": 260810,
     "Name": "QUIMA PEAK",
     "elevation": 7984,
-    "lat": 38.4,
-    "long": 117
+    "lat": 38.4869444,
+    "long": -117.0950000
   },
   {
     "wimsID": 261204,
@@ -7124,10 +7124,15 @@ var nameArMap = new Map(nameAr)
       };
   // console.log(rawsGeoJSON.features)
   var f = rawsPercentiles.RAWS;
+  // console.log(JSON.stringify(rawsPercentiles))
   //// this makes geojson object with properties for the points on the map. 
   f.map((curr)=>{
   	var lat = curr.lat;
   	var lon = curr.lon;
+  	// console.log(curr)
+  	if (curr.wimsId == 260810){
+ 		console.log('quima')
+ 	}
   	var arPush = {
           'type': 'Feature',
           'geometry': {
@@ -7151,7 +7156,7 @@ var nameArMap = new Map(nameAr)
     rawsGeoJSON.features.push(arPush)
 
   })
-  // console.log(JSON.stringify(rawsGeoJSON))
+  console.log(JSON.stringify(rawsGeoJSON))
 
 var newAr = [];
 
@@ -7165,6 +7170,7 @@ var percentileMap = new Map(percentileAr)
 // console.log(percentileMap)
  psaRawsInfo.map((curr)=>{
  	// console.log(curr)
+
   	var gbInfo = curr;
   	newAr.push(gbInfo);
   	var stns = gbInfo.RAWS;
@@ -7216,7 +7222,7 @@ var percentileMap = new Map(percentileAr)
   })
  // console.log(newAr)
   // console.log(psaRawsInfo[1].RAWS[101314])
-  console.log(JSON.stringify(psaRawsInfo))
+  // console.log(JSON.stringify(psaRawsInfo))
   // psaRawsInfo.map((curr)=>{console.log(curr)})
 
   
