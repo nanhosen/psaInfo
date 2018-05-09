@@ -48,6 +48,33 @@ var getERCData =  async function(){
 getERCData()
 .then(
   (g)=>{
+    var container = document.getElementById('popup');
+    var content = document.getElementById('popup-content');
+    var closer = document.getElementById('popup-closer');
+
+
+    /**
+     * Create an overlay to anchor the popup to the map.
+     */
+    var overlay = new ol.Overlay({
+      element: container,
+      autoPan: true,
+      autoPanAnimation: {
+        duration: 250
+      }
+    });
+
+
+    /**
+     * Add a click handler to hide the popup.
+     * @return {boolean} Don't follow the href.
+     */
+    closer.onclick = function() {
+      overlay.setPosition(undefined);
+      closer.blur();
+      return false;
+    };
+
     var infoArea = document.getElementById('infoArea');
     var matrixArea = document.getElementById('matrixArea');
     var detailDiv = document.getElementById('details');
@@ -58,6 +85,9 @@ getERCData()
 
     var colorAr = [['highest','purple'],['p97','pink'],['p90','red'],['p80','orange'],['p70','yellow'],['p50','green']];
     var colorMap = new Map(colorAr);
+
+    var percNameAr = [['highest','highest'],['p97','97th percentile'],['p90','90th percentile'],['p80','80th percentile'],['p70','70th percentile'],['p50','50th percentile']];
+    var percNameMap = new Map(percNameAr);
 
     var assignValue = function(id,obAr){
       // console.log('obAr',obAr)
@@ -538,6 +568,7 @@ getERCData()
         vectorLayer,
         rawsPoints
       ],
+      overlays: [overlay],
       target: 'map',
       controls: ol.control.defaults({
         attributionOptions: {
@@ -569,6 +600,7 @@ getERCData()
 
     map.on('pointermove', function(evt) {
       var pixel = map.getEventPixel(evt.originalEvent);
+      var coord = evt.coordinate;
       var pix = evt.pixel;
       var feat = map.forEachFeatureAtPixel(pixel,function (feature) {
         return feature
@@ -576,10 +608,24 @@ getERCData()
             layerFilter: function (layer) {
                 return layer.get('name') === 'rawsPoints';
             }
-        });;
-      console.log('feat1',feat.get('id'))
-
-
+        });
+      // console.log('feat1',feat.get('id'))
+      if(feat!==undefined){
+        var stnId = feat.get('id');
+        var stnName = feat.get('name');
+        var infStn = stnInfo[stnId];
+        var ercCur = infStn.erc;
+        var lowerPerc  =infStn.lower;
+        var lowerV = infStn.lowerVal;
+        var upperPerc = infStn.upper;
+        var upperV = infStn.upperVal;
+        var trendIs = infStn.trend;
+        console.log(ercCur)
+        // content.innerHTML = stnName + ' RAWS(' + stnID + ') ERC is ' + trendIs + 'Current ERC Calue: ' + ercCur + 'ERC is between ' + lowerPerc + ' and ' + upperPerc;
+        content.innerHTML = stnName + ' RAWS (' + stnId + ') <br />ERC is ' + trendIs + '<br />Current ERC Value: ' + ercCur + '<br />ERC is between ' + percNameMap.get(lowerPerc) + ' and ' + percNameMap.get(upperPerc) +'<br />' + percNameMap.get(lowerPerc) + ': ' + lowerV + '<br />' + percNameMap.get(upperPerc) + ': ' + upperV;
+        overlay.setPosition(coord)
+      }
+      
       
       // var isLayer = map.forEachFeatureAtPixel(pixel, {
       //   layerFilter: function (layer) {
