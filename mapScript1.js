@@ -382,14 +382,15 @@ getERCData()
     var highlight;
 
 
-    var displayFeatureInfo =  async function(pixel) {
+    var displayFeatureInfo =  async function(pixel,feat) {
       // console.log('pixel', pixel)
       let rawsInfo = await ajax({method: 'GET',url: './data/rawsAllInfoElev.json'})
-      var feature = map.forEachFeatureAtPixel(pixel, function(feature,layer) {
-        // console.log('layeur', layer.get('collection_id'),'feature',feature.get('collection_id'))
-        return feature;
-        // console.log(feature)
-      });
+      // var feature = map.forEachFeatureAtPixel(pixel, function(feature,layer) {
+      //   // console.log('layeur', layer.get('collection_id'),'feature',feature.get('collection_id'))
+      //   return feature;
+      //   // console.log(feature)
+      // });
+      var feature = feat;
 
       if (feature) {
         // console.log('ugh', feature.get('name'))
@@ -518,22 +519,7 @@ getERCData()
       }
     });
 
-    // var vectorLayer = new ol.layer.Vector({
-    //   title: 'added Layer',
-    //   source: new ol.source.GeoJSON({
-    //      projection : 'EPSG:3857',
-    //      url: 'layers/convert.geojson'
-    //   })
-    // })
-
-    // var gbProjection = new ol.proj.Projection({
-    //   code: 'EPSG:4269',
-    //   // The extent is used to determine zoom level 0. Recommended values for a
-    //   // projection's validity extent can be found at https://epsg.io/.
-    //   extent: [-172.54 , 23.81, -47.74, 86.46],
-    //   units: 'degrees'
-    // });
-    // ol.proj.addProjection(gbProjection);
+  
 
     var overallView = new ol.View({
       // center: ol.proj.transform([-114.012036, 40.440194], 'EPSG:4326','EPSG:3857'),
@@ -581,90 +567,55 @@ getERCData()
     map.on('click', function(evt) {
       var pixel = map.getEventPixel(evt.originalEvent);
       var pix = evt.pixel;
-      map.hasFeatureAtPixel(pixel, {
-        layerFilter: function (layer) {
-        // console.log('layer Source',layer.getSource(),'layer name',layer.get('name'));
-        if(layer.get('name') == 'PSAs'){
-          console.log('psalayer')
-          displayFeatureInfo(pix);
-          // console.log('hi')
+      var feats = map.forEachFeatureAtPixel(pixel,function (feature,layer) {
+        // console.log('name',layer.get('name'))
+        var newObj = {
+          'name': layer.get('name'),
+          'feature':feature
         }
-        else{
-          console.log('not psa layer')
-        }
-        }
-      })
-      // displayFeatureInfo(evt.pixel);
-      // flyToDispatch(evt.pixel);
-    });
-
-    map.on('pointermove', function(evt) {
-      var pixel = map.getEventPixel(evt.originalEvent);
-      var coord = evt.coordinate;
-      var pix = evt.pixel;
-      var feat = map.forEachFeatureAtPixel(pixel,function (feature) {
-        return feature
+        return newObj
         },{
             layerFilter: function (layer) {
+              if(layer.get('name') === 'PSAs'){
+                console.log('two PSAs')
+                return layer.get('name') === 'PSAs';
+              }
+              else if(layer.get('name') === 'rawsPoints') {
+                console.log('two RAWS')
                 return layer.get('name') === 'rawsPoints';
+              }
             }
         });
-      // console.log('feat1',feat.get('id'))
+      var feat = feats.feature;
+      var layerName = feats.name;
+      console.log('feat',feat,'name',feats.name)
       if(feat!==undefined){
-        var stnId = feat.get('id');
-        var stnName = feat.get('name');
-        var infStn = stnInfo[stnId];
-        var ercCur = infStn.erc;
-        var lowerPerc  =infStn.lower;
-        var lowerV = infStn.lowerVal;
-        var upperPerc = infStn.upper;
-        var upperV = infStn.upperVal;
-        var trendIs = infStn.trend;
-        console.log(ercCur)
-        // content.innerHTML = stnName + ' RAWS(' + stnID + ') ERC is ' + trendIs + 'Current ERC Calue: ' + ercCur + 'ERC is between ' + lowerPerc + ' and ' + upperPerc;
-        content.innerHTML = stnName + ' RAWS (' + stnId + ') <br />ERC is ' + trendIs + '<br />Current ERC Value: ' + ercCur + '<br />ERC is between ' + percNameMap.get(lowerPerc) + ' and ' + percNameMap.get(upperPerc) +'<br />' + percNameMap.get(lowerPerc) + ': ' + lowerV + '<br />' + percNameMap.get(upperPerc) + ': ' + upperV;
-        overlay.setPosition(coord)
+        if(layerName == 'PSAs'){
+          displayFeatureInfo(pix,feat)
+        }
+        else if(layerName == 'rawsPoints'){
+          var coord = evt.coordinate;
+          var stnId = feat.get('id');
+          var stnName = feat.get('name');
+          var infStn = stnInfo[stnId];
+          var ercCur = infStn.erc;
+          var lowerPerc  =infStn.lower;
+          var lowerV = infStn.lowerVal;
+          var upperPerc = infStn.upper;
+          var upperV = infStn.upperVal;
+          var trendIs = infStn.trend;
+          console.log(ercCur)
+          // content.innerHTML = stnName + ' RAWS(' + stnID + ') ERC is ' + trendIs + 'Current ERC Calue: ' + ercCur + 'ERC is between ' + lowerPerc + ' and ' + upperPerc;
+          content.innerHTML = stnName + ' RAWS (' + stnId + ') <br />ERC is ' + trendIs + '<br />Current ERC Value: ' + ercCur + '<br />ERC is between ' + percNameMap.get(lowerPerc) + ' and ' + percNameMap.get(upperPerc) +'<br />' + percNameMap.get(lowerPerc) + ': ' + lowerV + '<br />' + percNameMap.get(upperPerc) + ': ' + upperV;
+          overlay.setPosition(coord)
+          }
       }
-      
-      
-      // var isLayer = map.forEachFeatureAtPixel(pixel, {
-      //   layerFilter: function (layer) {
-      //     if(layer.get('name') == 'rawsPoints'){
-      //       return true
-      //     }
-      //   }
-      // })
-      // console.log('islayer', isLayer)
-      // if(isLayer == true){
-      //   var pt = map.forEachFeatureAtPixel(pixel, function(feature,layer) {
-      //   // console.log('layeur', layer.get('collection_id'),'feature',feature.get('collection_id'))
-      //   // return feature;
-      //   console.log('feature',feature.get('id'))
-      // });
-      // }
-      // displayFeatureInfo(evt.pixel);
-      // flyToDispatch(evt.pixel);
+      else{
+        console.log('notPSAlayer')
+      }
+
     });
 
-    // map.on('hover',function(evt){
-    //   var pixel = map.getEventPixel(evt.originalEvent);
-    //   var pix = evt.pixel;
-    //   var feature = map.forEachFeatureAtPixel(pixel, function(feature,layer) {
-    //     console.log('layeur', layer.get('collection_id'),'feature',feature.get('collection_id'))
-    //     // return feature;
-    //     console.log(feature)
-    //   }, map.hasFeatureAtPixel(pixel, {
-    //     layerFilter: function (layer) {
-    //     console.log('layer Source',layer.getSource(),'layer name',layer.get('name'));
-    //     if(layer.get('name') == 'rawsPoints'){
-    //       // displayFeatureInfo(pix);
-    //       console.log('hi hover')
-    //     }
-    //     }
-    //   }))
-    // })
-
-    // Get the modal
 
     var info = document.getElementById('info');
 
