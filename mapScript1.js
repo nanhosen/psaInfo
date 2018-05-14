@@ -381,22 +381,29 @@ getERCData()
 
     var highlight;
 
+    var makePopup = function(evt,feat){
+      var coord = evt.coordinate;
+      var stnId = feat.get('id');
+      var stnName = feat.get('name');
+      var infStn = stnInfo[stnId];
+      var ercCur = infStn.erc;
+      var lowerPerc  =infStn.lower;
+      var lowerV = infStn.lowerVal;
+      var upperPerc = infStn.upper;
+      var upperV = infStn.upperVal;
+      var trendIs = infStn.trend;
+      // content.innerHTML = stnName + ' RAWS(' + stnID + ') ERC is ' + trendIs + 'Current ERC Calue: ' + ercCur + 'ERC is between ' + lowerPerc + ' and ' + upperPerc;
+      content.innerHTML = stnName + ' RAWS (' + stnId + ') <br />ERC is ' + trendIs + '<br />Current ERC Value: ' + ercCur + '<br />ERC is between ' + percNameMap.get(lowerPerc) + ' and ' + percNameMap.get(upperPerc) +'<br />' + percNameMap.get(lowerPerc) + ': ' + lowerV + '<br />' + percNameMap.get(upperPerc) + ': ' + upperV;
+      overlay.setPosition(coord)
+    }
 
     var displayFeatureInfo =  async function(pixel,feat) {
       // console.log('pixel', pixel)
       let rawsInfo = await ajax({method: 'GET',url: './data/rawsAllInfoElev.json'})
-      // var feature = map.forEachFeatureAtPixel(pixel, function(feature,layer) {
-      //   // console.log('layeur', layer.get('collection_id'),'feature',feature.get('collection_id'))
-      //   return feature;
-      //   // console.log(feature)
-      // });
       var feature = feat;
-
       if (feature) {
-        // console.log('ugh', feature.get('name'))
         var testT = document.getElementById('test');
         psaNm = feature.get('NUMBER');
-      // console.log('rawsInfo', rawsInfo)
         var rawsDetailAr = [];
         var rawsDetail;
           rawsInfo.map((curr)=>{
@@ -410,7 +417,6 @@ getERCData()
         var rawsIdArray = Object.keys(psaRaws)
 
         var rawsAmt = rawsIdArray.length;
-        // console.log('psaRaws', psaRaws[rawsIdArray[0]])
         testT.innerHTML = '<img class="card-img-top" src="data/'+ psaNm +'.jpg" alt="Card image cap" id="matrixImage">';
         var tablehtml = 'RAWS Info<br /><table class="table table-hover"><thead>';
             tablehtml +='<tr> <th scope="col">Name</th><th scope="col">ID</th><th scope="col">Lat</th><th scope="col">Lon</th><th scope="col">Elevation</th>';
@@ -442,7 +448,6 @@ getERCData()
       } else {
         infoArea.innerHTML = '&nbsp;';
       }
-      console.log('highlight', highlight)
       if (feature !== highlight) {
         if (highlight) {
           featureOverlay.getSource().removeFeature(highlight);
@@ -577,37 +582,22 @@ getERCData()
         },{
             layerFilter: function (layer) {
               if(layer.get('name') === 'PSAs'){
-                console.log('two PSAs')
                 return layer.get('name') === 'PSAs';
               }
               else if(layer.get('name') === 'rawsPoints') {
-                console.log('two RAWS')
                 return layer.get('name') === 'rawsPoints';
               }
             }
         });
       var feat = feats.feature;
       var layerName = feats.name;
-      console.log('feat',feat,'name',feats.name)
       if(feat!==undefined){
         if(layerName == 'PSAs'){
           displayFeatureInfo(pix,feat)
         }
         else if(layerName == 'rawsPoints'){
-          var coord = evt.coordinate;
-          var stnId = feat.get('id');
-          var stnName = feat.get('name');
-          var infStn = stnInfo[stnId];
-          var ercCur = infStn.erc;
-          var lowerPerc  =infStn.lower;
-          var lowerV = infStn.lowerVal;
-          var upperPerc = infStn.upper;
-          var upperV = infStn.upperVal;
-          var trendIs = infStn.trend;
-          console.log(ercCur)
-          // content.innerHTML = stnName + ' RAWS(' + stnID + ') ERC is ' + trendIs + 'Current ERC Calue: ' + ercCur + 'ERC is between ' + lowerPerc + ' and ' + upperPerc;
-          content.innerHTML = stnName + ' RAWS (' + stnId + ') <br />ERC is ' + trendIs + '<br />Current ERC Value: ' + ercCur + '<br />ERC is between ' + percNameMap.get(lowerPerc) + ' and ' + percNameMap.get(upperPerc) +'<br />' + percNameMap.get(lowerPerc) + ': ' + lowerV + '<br />' + percNameMap.get(upperPerc) + ': ' + upperV;
-          overlay.setPosition(coord)
+          makePopup(evt,feat)
+          
           }
       }
       else{
