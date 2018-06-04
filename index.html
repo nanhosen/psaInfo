@@ -20,6 +20,7 @@
     <link href="starter-template.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="modalCss.css">
     <link rel="stylesheet" type="text/css" href="popupStyle.css">
+    <link rel="stylesheet" type="text/css" href="legendStyle.css">
         <style>
           .ol-popup {
             position: absolute;
@@ -87,12 +88,51 @@
         <div class="col-6">
           <div class="card">
             <h5 class="card-header" id="psaInfo">PSA Map and RAWS ERC Percentiles</h5>
-            <div id="map" class="map" style="height:700px"></div>
+            <div id="map" class="map" style="height:550px"></div>
             <div id="popup" class="ol-popup">
               <a href="#" id="popup-closer" class="ol-popup-closer"></a>
               <div id="popup-content"></div>
             </div>
             <div class="card-footer text-muted" id="date">Updated Date </div>
+            <div class="card-footer text-muted" id="legend">
+              <svg style='float: left' width="560" height="80">
+                <circle cx="30" cy="15" r="9"
+                  fill="rgba(167, 6, 248, 1)" 
+                  stroke="rgba(0,0,0, 1)" stroke-width="0.5"
+                  opacity="1"></circle>
+                <text x="45" y="20" fill="rgba(0, 0, 0, 1)">97th and above</text> 
+
+                <circle cx="30" cy="40" r="9"
+                  fill="rgba(142,0,20, 0.9)" 
+                  stroke="rgba(0,0,0, 1)" stroke-width="0.5"
+                  opacity='1'></circle>
+                <text x="45" y="45" fill="rgba(0, 0, 0, 1)">90th to 96th</text>
+
+                <circle cx="30" cy="65" r="9"
+                  fill='rgba(250,6,6,1)' 
+                  stroke="rgba(0,0,0, 1)" stroke-width="0.5"
+                  opacity="1"></circle>  
+                <text x="45" y="70" fill="rgba(0, 0, 0, 1)">80th to 89th</text> 
+
+                <circle cx="175" cy="15" r="9"
+                  fill="rgba(255, 167, 0, 1)" 
+                  stroke="rgba(0,0,0, 1)" stroke-width="0.5"
+                  opacity="1"></circle>
+                <text x="190" y="20" fill="rgba(0, 0, 0, 1)">70th to 79th</text> 
+
+                <circle cx="175" cy="40" r="9"
+                  fill="rgba(255,255,0, 1)" 
+                  stroke="rgba(0,0,0, 1)" stroke-width="0.5"
+                  opacity='1'></circle>
+                <text x="190" y="45" fill="rgba(0, 0, 0, 1)">50th to 69th</text>
+
+                <circle cx="175" cy="65" r="9"
+                  fill='rgba(0,204,0,1)' 
+                  stroke="rgba(0,0,0, 1)" stroke-width="0.5"
+                  opacity="1"></circle>  
+                <text x="190" y="70" fill="rgba(0, 0, 0, 1)">below 50th</text>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="col-6">
