@@ -1,3 +1,4 @@
+//7 day brown : 225,198,148
 function ajax(options) {
   return new Promise(function(resolve, reject) {
     var xhr = new XMLHttpRequest();
@@ -91,6 +92,105 @@ getERCData()
 
     var percNameAr = [['highest','highest'],['p97','97th percentile'],['p90','90th percentile'],['p80','80th percentile'],['p70','70th percentile'],['p50','50th percentile']];
     var percNameMap = new Map(percNameAr);
+
+    var getPsaColor = async function(stnInfo,layerPsa){
+      var psaThresh = await ajax({method: 'GET',url: './data/rawsAllInfo.json'})
+      var psaColorObj = []
+      // console.log(stnInfo)
+      psaThresh.map((curr)=>{
+        var psa = curr.PSA;
+        if(layerPsa == psa){
+          // console.log('here')
+          if(curr.matrix!==undefined){
+          getPSAAvg(stnInfo,psa)
+          .then((g)=>{
+            // console.log(g)
+            var erc = g[0];
+            // var erc = 10;
+            var fm = g[1];
+            // var fm = 13;
+            console.log('erc',erc,'fm',fm)
+            var matrix = curr.matrix;
+            var green1 = matrix.green1;
+            var greenErc1 = green1.erc[0];
+            var greenErc2 = green1.erc[1];
+            var greenFm1 = green1.fm[0];
+            var greenFm2 = green1.fm[1];
+            var yellow1 = matrix.yellow1;
+            var yellowErc1 = yellow1.erc[0]
+            var yellowErc2 = yellow1.erc[1]
+            var yellowFm1 = yellow1.fm[0]
+            var yellowFm2 = yellow1.fm[1]
+            var brown1 = matrix.brown1;
+            var brownErc = brown1.erc;
+            var brownFm = brown1.fm;
+            // console.log(greenFm1,greenFm2);
+            var layerColor
+            if((erc >= greenErc1[0] && fm >= greenFm1[0]) && (erc <= greenErc1[1] && fm <= greenFm1[1])){
+              console.log("green erc")
+              layerColor = "green";
+              psaColorObj[0] = layerColor;
+            }
+            else if((erc >= greenErc2[0] && fm >= greenFm2[0]) && (erc <= greenErc2[1] && fm <= greenFm2[1])){
+              console.log("green erc")
+              layerColor = "green";
+              psaColorObj[0] = layerColor;
+            }
+            else if((erc >= yellowErc1[0] && fm >= yellowFm1[0]) && (erc <= yellowErc1[1] && fm <= yellowFm1[1])){
+              console.log("yellow erc")
+              layerColor = "yellow";
+              psaColorObj[0] = layerColor;
+            }
+            else if((erc >= yellowErc2[0] && fm >= yellowFm2[0]) && (erc <= yellowErc2[1] && fm <= yellowFm2[1])){
+              console.log("yellow erc")
+              layerColor = "yellow";
+              psaColorObj[0] = layerColor;
+            }
+            else if((erc >= brownErc[0] && fm >= brownFm[0])&&( erc <= brownErc[1] && fm <= brownFm[1])){
+              console.log("brown erc")
+              layerColor = "brown";
+              psaColorObj[0] = layerColor;
+            }
+            else{
+              console.log("green cause didn't fit")
+              layerColor = "green";
+              psaColorObj[0] = layerColor;
+            }
+
+          })
+          // console.log(average1)
+        }
+        else{
+             layerColor = "grey";
+              psaColorObj[0] = layerColor;
+        }
+        return psaColorObj
+        }
+        
+      })
+      return psaColorObj
+      // console.log(psaThresh,"GB35")
+    }
+
+   var col = getPsaColor(stnInfo,"GB35").then((g)=>{
+    var color = g;
+    console.log('g0',color.length)
+  })
+   // console.log('stnInfo',stnInfo)
+
+   getPsaColor1 = async function(stnInfo,layerPsa){
+      var psaThresh = await ajax({method: 'GET',url: './data/rawsAllInfo.json'})
+      var b;
+      psaThresh.map((curr)=>{
+        if(layerPsa == curr.PSA){
+          b = layerPsa
+        }
+      })
+      // console.log(psaThresh)
+      return b
+    }
+   var col1 = getPsaColor1(stnInfo,"GB35").then((g)=>{return g})
+   console.log(col1)
 
     var assignValue = function(id,obAr){
       // console.log('obAr',obAr)
@@ -346,7 +446,6 @@ getERCData()
       return imgName
     }
 
-
     // var pointStyleFunction = function(feature,resolution){
     //   var id = feature.get('id');
     //   return new ol.style.Style({
@@ -476,34 +575,35 @@ getERCData()
       overlay.setPosition(coord)
     }
     var average = arr => arr.reduce( ( p, c ) => p + c, 0 ) / arr.length;
-    var getPSAAvg = async function(stnInfo) {
-      var psaAvgArray = [];
+    var getPSAAvg = async function(stnInfo,psa) {
       // console.log('pixel', pixel)
       let psaInfo = await ajax({method: 'GET',url: './data/PSARawsInfo.json'})
-      var psaArray = Object.keys(psaInfo)
-      // console.log(psaArray)
-      var psaERCArray = [];
-      psaArray.map((curr)=>{
-        // console.log('curr',curr)
-        var rawsObj = psaInfo[curr].RAWS;
-        var psaErcArray1 = [];
-        for(var prop in rawsObj){
-          var stnData = stnInfo[prop];
-          if(stnData !== undefined){
-            var stnERC = stnData.erc;
-            if (stnERC != "missing"){
-              psaErcArray1.push(parseInt(stnERC))
-            }
+      var rawsObj = psaInfo[psa].RAWS;
+      var psaErcArray1 = [];
+      var psaHunArray = [];
+      for(var prop in rawsObj){
+        var stnData = stnInfo[prop];
+        if(stnData !== undefined){
+          var stnERC = stnData.erc;
+          var stnHun = stnData.hunHr
+          if (stnERC != "missing"){
+            psaErcArray1.push(parseInt(stnERC))
           }
+          if (stnHun != "missing"){
+            psaHunArray.push(parseInt(stnHun))
+          }
+
         }
-        var ercAvg = average(psaErcArray1)
-        // console.log(curr,average(psaErcArray1),psaErcArray1)
-        psaAvgArray.push([curr,ercAvg])
-      })
-      psaAvgArrayMap = new Map(psaAvgArray)
-      return psaAvgArrayMap
+      }
+      var ercAvg = average(psaErcArray1)
+      var hunAvg = average(psaHunArray)
+      var psaDataArray = [Math.round(ercAvg),Math.round(hunAvg)]
+        // console.log(psa,average(psaErcArray1),psaErcArray1)
+      
+      return psaDataArray
+      // console.log(ercAvg)
     }
-    getPSAAvg(stnInfo)
+    // getPSAAvg(stnInfo,"GB03")
     var displayFeatureInfo =  async function(pixel,feat) {
       // console.log('pixel', pixel)
       let rawsInfo = await ajax({method: 'GET',url: './data/rawsAllInfoElev.json'})
@@ -522,10 +622,16 @@ getERCData()
         var PSA = rawsDetail.PSA;
         var psaRaws = rawsDetail.RAWS;
         var rawsIdArray = Object.keys(psaRaws)
-
         var rawsAmt = rawsIdArray.length;
+        var psaAvg = getPSAAvg(stnInfo,psaNm).then((val)=>{
+          var ercDiv = document.getElementById('avgERC');
+          ercDiv.innerHTML = 'PSA Average ERC: ' + val[0] + '<br />PSA Average 100 hr: ' + val[1];
+          console.log('observerd erc/fm',val)
+        })
+        // console.log(psaAvg)
+        
         testT.innerHTML = '<img class="card-img-top" src="data/'+ psaNm +'.jpg" alt="Card image cap" id="matrixImage">';
-        var tablehtml = 'RAWS Info<br /><table class="table table-hover"><thead>';
+        var tablehtml = '<div id = "avgERC"></div> RAWS Info<br /><table class="table table-hover"><thead>';
             tablehtml +='<tr> <th scope="col">Name</th><th scope="col">ID</th><th scope="col">Lat</th><th scope="col">Lon</th><th scope="col">Elevation</th>';
             tablehtml +='</tr></thead><tbody>';
         //     
@@ -552,7 +658,8 @@ getERCData()
         // matrixArea.setAttribute('src', './data/' + feature.get('NUMBER') + '.jpg');
         // hundred.setAttribute('src', './WebCharts/' + feature.get('NUMBER') + '/FM100Graph.PNG');
         // thousand.setAttribute('src', './WebCharts/' + feature.get('NUMBER') + '/FM1000Graph.PNG');
-      } else {
+      } 
+      else {
         infoArea.innerHTML = '&nbsp;';
       }
       if (feature !== highlight) {
@@ -611,7 +718,35 @@ getERCData()
     });
 
 
+var createLayerTextStyle = function(feature, resolution) {
+ return new ol.style.Text({
+    font: '12px Montserrat, sans-serif',
+    text: resolution < 5000 ? feature.get('NUMBER') : '',
+    fill: new ol.style.Fill({
+      color: '#000'
+    }),
+    stroke: new ol.style.Stroke({
+      color: '#fff',
+      width: 3
+    })
+  });
+};
 
+var layerStyleFunction1 = function(feature,resolution){
+        return new ol.style.Style({
+        fill: new ol.style.Fill({
+          color: getPsaColor(stnInfo,feature.get('NUMBER'))
+        }),
+        stroke: new ol.style.Stroke({
+          color: '#319FD3',
+          width: 1
+        }),
+        text: createLayerTextStyle(feature,resolution)
+      })};
+var layerStyleFunction = function(feature, resolution) {
+        style.getText().setText(resolution < 5000 ? feature.get('NUMBER') : '');
+        return style;
+      }        
 
 
     var vectorLayer = new ol.layer.Vector({
@@ -625,10 +760,7 @@ getERCData()
       minResolution: 0,
       maxResolution: 5000,
       visible: true,
-      style: function(feature, resolution) {
-        style.getText().setText(resolution < 5000 ? feature.get('NUMBER') : '');
-        return style;
-      }
+      style: layerStyleFunction1
     });
 
   
