@@ -369,33 +369,33 @@ getERCData()
             // console.log(greenFm1,greenFm2);
             var layerColor
             if((erc >= greenErc1[0] && fm >= greenFm1[0]) && (erc <= greenErc1[1] && fm <= greenFm1[1])){
-              console.log("green erc")
-              layerColor = "green";
+              console.log("green erc",psa,erc,fm)
+              layerColor = "rgba(139,197,108,0.8)";
               psaColor = layerColor;
             }
             else if((erc >= greenErc2[0] && fm >= greenFm2[0]) && (erc <= greenErc2[1] && fm <= greenFm2[1])){
-              console.log("green erc")
-              layerColor = "green";
+              console.log("green erc",psa,erc,fm)
+              layerColor = "rgba(139,197,108,0.8)";
               psaColor = layerColor;
             }
             else if((erc >= yellowErc1[0] && fm >= yellowFm1[0]) && (erc <= yellowErc1[1] && fm <= yellowFm1[1])){
               console.log("yellow erc")
-              layerColor = "yellow";
+              layerColor = "rgba(251,250,115,0.8)";
               psaColor = layerColor;
             }
             else if((erc >= yellowErc2[0] && fm >= yellowFm2[0]) && (erc <= yellowErc2[1] && fm <= yellowFm2[1])){
               console.log("yellow erc")
-              layerColor = "yellow";
+              layerColor = "rgba(251,250,115,0.8)";
               psaColor = layerColor;
             }
             else if((erc >= brownErc[0] && fm >= brownFm[0])&&( erc <= brownErc[1] && fm <= brownFm[1])){
               console.log("brown erc")
-              layerColor = "brown";
+              layerColor = "rgba(225,198,148,0.8)";
               psaColor = layerColor;
             }
             else{
-              console.log("green cause didn't fit")
-              layerColor = "green";
+              console.log("green cause didn't fit",psa,erc,fm)
+              layerColor = "grey";
               psaColor = layerColor;
             }
 
