@@ -39,11 +39,12 @@ function ajax(options) {
 }
 
 var getERCData =  async function(){
+  // let ercDay1 = await ajax({method: 'GET',url: 'https://www.ercserver.us/day3'}) 
   let ercDay1 = await ajax({method: 'GET',url: 'https://www.ercserver.us/day1'}) 
   let ercDay2 = await ajax({method: 'GET',url: 'https://www.ercserver.us/day2'}) 
   let ercDay3 = await ajax({method: 'GET',url: 'https://www.ercserver.us/day3'}) 
   let psaThresh = await ajax({method: 'GET',url: './data/rawsAllInfo.json'})
-  let psaInfo = await ajax({method: 'GET',url: './data/PSARawsInfo.json'})
+  let psaInfo = await ajax({method: 'GET',url: './data/psaRawsInfo.json'})
   let rawsInfo = await ajax({method: 'GET',url: './data/rawsAllInfoElev.json'})
   var geojsonObject =  await ajax({method: 'GET',url: './data/geoJsonObject.json'});
 
@@ -310,7 +311,7 @@ getERCData()
       var psaHunArray = [];
       for(var prop in rawsObj){
         var stnData = stnInfo[prop];
-        console.log('prop',prop)
+        // console.log('prop',prop)
         if(stnData !== undefined){
           var stnERC = stnData.erc;
           var stnHun = stnData.hunHr
@@ -351,7 +352,7 @@ getERCData()
             // var erc = 10;
             var fm = attempt[1];
             // var fm = 13;
-            console.log('erc',erc,'fm',fm)
+            // console.log('erc',erc,'fm',fm)
             var matrix = curr.matrix;
             var green1 = matrix.green1;
             var greenErc1 = green1.erc[0];
@@ -369,32 +370,32 @@ getERCData()
             // console.log(greenFm1,greenFm2);
             var layerColor
             if((erc >= greenErc1[0] && fm >= greenFm1[0]) && (erc <= greenErc1[1] && fm <= greenFm1[1])){
-              console.log("green erc",psa,erc,fm)
+              // console.log("green erc",psa,erc,fm)
               layerColor = "rgba(139,197,108,0.8)";
               psaColor = layerColor;
             }
             else if((erc >= greenErc2[0] && fm >= greenFm2[0]) && (erc <= greenErc2[1] && fm <= greenFm2[1])){
-              console.log("green erc",psa,erc,fm)
+              // console.log("green erc",psa,erc,fm)
               layerColor = "rgba(139,197,108,0.8)";
               psaColor = layerColor;
             }
             else if((erc >= yellowErc1[0] && fm >= yellowFm1[0]) && (erc <= yellowErc1[1] && fm <= yellowFm1[1])){
-              console.log("yellow erc")
+              // console.log("yellow erc")
               layerColor = "rgba(251,250,115,0.8)";
               psaColor = layerColor;
             }
             else if((erc >= yellowErc2[0] && fm >= yellowFm2[0]) && (erc <= yellowErc2[1] && fm <= yellowFm2[1])){
-              console.log("yellow erc")
+              // console.log("yellow erc")
               layerColor = "rgba(251,250,115,0.8)";
               psaColor = layerColor;
             }
             else if((erc >= brownErc[0] && fm >= brownFm[0])&&( erc <= brownErc[1] && fm <= brownFm[1])){
-              console.log("brown erc")
+              // console.log("brown erc")
               layerColor = "rgba(225,198,148,0.8)";
               psaColor = layerColor;
             }
             else{
-              console.log("green cause didn't fit",psa,erc,fm)
+              // console.log("green cause didn't fit",psa,erc,fm)
               layerColor = "grey";
               psaColor = layerColor;
             }
@@ -441,6 +442,9 @@ getERCData()
     var ercDay2 = g[1];
     var ercDay3 = g[2];
     // console.log('day1', ercDay1)
+    var obDate = ercDay1[Object.keys(ercDay1)[0]]
+    dateDiv.innerHTML='Observations from ' + obDate.obDate + '<div> <button type="button" class="btn btn-dark" id="toggleRaws" onclick="console.log(obDate)">Toggle Points</button></div>';
+    console.log('day1', obDate)
     
     
     
@@ -565,6 +569,33 @@ getERCData()
       });
     }
 
+    var toggleBtn = document.getElementById('toggleRaws');
+    // toggleBtn.addEventListener('click',toggleLayer(rawsPoints))
+    toggleBtn.addEventListener('click',toggleLayer)
+    // toggleBtn.innerHTML='hi'
+
+    function toggleLayer() {
+      // console.log(layerName)
+      // var layerNm = layerName.get('name');
+      // console.log(layerNm)
+      // console.log(layerName.get('name').getVisible())
+      var visibility = rawsPoints.getVisible();
+      console.log(visibility)
+      if(visibility == true){
+        console.log('visible')
+        rawsPoints.setVisible(false)
+      }
+      else if(visibility == false){
+        console.log('false')
+        rawsPoints.setVisible(true)
+        }
+      // if (layerName.getVisibility() == true) {
+      //     layerName.setVisibility(false);
+      // } else {
+      //     layerName.setVisibility(true);
+      // }
+    }
+
     var iconFeature = new ol.Feature(new ol.geom.Point([0, 0]));
     iconFeature.set('style', createStyle(undefined));
 
@@ -575,6 +606,7 @@ getERCData()
       // projection: 'EPSG:3857',
       source: vectorSource,
       name: 'rawsPoints',
+      visible: true,
       // style: styleFunction
       style: pointStyleFunction
     });
@@ -665,13 +697,13 @@ getERCData()
         var rawsAmt = rawsIdArray.length;
         var psaAvg = getPSAAvg(stnInfo,psaNm);
         var ercDiv = document.getElementById('avgERC');
-        // ercDiv.innerHTML = 'PSA Average ERC: ' + val[0] + '<br />PSA Average 100 hr: ' + val[1];
+        // ercDiv.innerHTML = 'PSA Average ERC: ' + psaAvg + '<br />PSA Average 100 hr: ' + psaAvg;
         // console.log('observerd erc/fm',val)
         
-        // console.log(psaAvg)
+        console.log(psaAvg)
         
         testT.innerHTML = '<img class="card-img-top" src="data/'+ psaNm +'.jpg" alt="Card image cap" id="matrixImage">';
-        var tablehtml = '<div id = "avgERC"></div> RAWS Info<br /><table class="table table-hover"><thead>';
+        var tablehtml = '<div id = "avgERC">Average ERC: ' + psaAvg[0] + ' Average FM100: ' + psaAvg[1] + '</div> RAWS Info<br /><table class="table table-hover"><thead>';
             tablehtml +='<tr> <th scope="col">Name</th><th scope="col">ID</th><th scope="col">Lat</th><th scope="col">Lon</th><th scope="col">Elevation</th>';
             tablehtml +='</tr></thead><tbody>';
         //     
@@ -855,6 +887,9 @@ var layerStyleFunction = function(feature, resolution) {
     });
 
     map.on('click', function(evt) {
+      // toggleLayer(rawsPoints)
+      // rawsPoints.setVisible(false)
+      console.log(rawsPoints.getVisible())
       var pixel = map.getEventPixel(evt.originalEvent);
       var pix = evt.pixel;
       var feats = map.forEachFeatureAtPixel(pixel,function (feature,layer) {
