@@ -77,3 +77,14 @@
         width: 100%;
     }
 }
+.rotate-north {
+  position: absolute;
+  top: 520px;
+  /*left: 0.5em;*/
+  left: 0.5em;
+  width: 150px;
+  background: rgba(249, 249, 249, 1); 
+}
+.ol-touch .rotate-north {
+  top: 180px;
+}

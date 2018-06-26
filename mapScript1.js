@@ -43,10 +43,11 @@ var getERCData =  async function(){
   let ercDay1 = await ajax({method: 'GET',url: 'https://www.ercserver.us/day1'}) 
   let ercDay2 = await ajax({method: 'GET',url: 'https://www.ercserver.us/day2'}) 
   let ercDay3 = await ajax({method: 'GET',url: 'https://www.ercserver.us/day3'}) 
-  let psaThresh = await ajax({method: 'GET',url: './data/rawsAllInfo.json'})
-  let psaInfo = await ajax({method: 'GET',url: './data/psaRawsInfo.json'})
-  let rawsInfo = await ajax({method: 'GET',url: './data/rawsAllInfoElev.json'})
-  var geojsonObject =  await ajax({method: 'GET',url: './data/geoJsonObject.json'});
+  let psaThresh = await ajax({method: 'GET',url: './data1/rawsAllInfo.json'})
+  let psaInfo = await ajax({method: 'GET',url: './data1/psaRawsInfo.json'})
+  let rawsInfo = await ajax({method: 'GET',url: './data1/rawsAllInfoElev.json'})
+  var geojsonObject =  await ajax({method: 'GET',url: './data1/geoJsonObject.json'});
+  var realThresh =  await ajax({method: 'GET',url: './data1/rawsInfoPercentiles.json'});
 
   var stnInfo = {}
  
@@ -212,12 +213,15 @@ var getERCData =  async function(){
       }
   }
 
-  var pointAr = geojsonObject.features;
-    var percentileOb = {};
+  // var pointAr = geojsonObject.features;
+  var pointAr = realThresh.RAWS;
+  console.log(pointAr)
+  var percentileOb = {};
 
     pointAr.map((curr)=>{
-      var id = curr.properties.id;
-      var percentileObAr = [curr.properties.highest, curr.properties.p97, curr.properties.p90,curr.properties.p80,curr.properties.p70,curr.properties.p50];
+      // console.log(curr)
+      var id = curr.id;
+      var percentileObAr = [curr.highest, curr.p97, curr.p90,curr.p80,curr.p70,curr.p50];
       assignValue(id,percentileObAr)
       
     })
@@ -443,7 +447,7 @@ getERCData()
     var ercDay3 = g[2];
     // console.log('day1', ercDay1)
     var obDate = ercDay1[Object.keys(ercDay1)[0]]
-    dateDiv.innerHTML='Observations from ' + obDate.obDate + '<div> <button type="button" class="btn btn-dark" id="toggleRaws" onclick="console.log(obDate)">Toggle Points</button></div>';
+    dateDiv.innerHTML='Observations from ' + obDate.obDate ;
     console.log('day1', obDate)
     
     
@@ -569,9 +573,39 @@ getERCData()
       });
     }
 
-    var toggleBtn = document.getElementById('toggleRaws');
+
+    window.app = {};
+    var app = window.app;
+
+    app.RotateNorthControl = function(opt_options) {
+
+        var options = opt_options || {};
+
+        var button = document.createElement('div');
+        button.innerHTML = '<div><input id="checkBox" type="checkbox" checked> RAWS Percentiles</div>';
+
+        var this_ = this;
+        var handleRotateNorth = function() {
+          this_.getMap().getView().setRotation(0);
+        };
+ 
+        button.addEventListener('click', toggleLayer);
+
+        var element = document.createElement('div');
+        element.className = 'rotate-north ol-unselectable ol-control';
+        element.appendChild(button);
+
+        ol.control.Control.call(this, {
+          element: element,
+          target: options.target
+        });
+
+      };
+      ol.inherits(app.RotateNorthControl, ol.control.Control);
+
+    // var toggleBtn = document.getElementById('toggleRaws');
     // toggleBtn.addEventListener('click',toggleLayer(rawsPoints))
-    toggleBtn.addEventListener('click',toggleLayer)
+    // toggleBtn.addEventListener('click',toggleLayer)
     // toggleBtn.innerHTML='hi'
 
     function toggleLayer() {
@@ -810,7 +844,7 @@ var layerStyleFunction1 = function(feature,resolution){
           color: getPsaColor(stnInfo,feature.get('NUMBER'))
         }),
         stroke: new ol.style.Stroke({
-          color: '#319FD3',
+          color: 'rgba(0,0,0,0.3)',
           width: 1
         }),
         text: createLayerTextStyle(feature,resolution)
@@ -879,10 +913,12 @@ var layerStyleFunction = function(feature, resolution) {
       overlays: [overlay],
       target: 'map',
       controls: ol.control.defaults({
-        attributionOptions: {
-          collapsible: false
-        }
-      }),
+          attributionOptions: {
+            collapsible: false
+          }
+        }).extend([
+          new app.RotateNorthControl()
+        ]),
       view: overallView
     });
 

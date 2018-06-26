@@ -1,26 +1,12 @@
 [{
 	"PSA": "GB01",
-	"matrix":{
-			"green1":{
-				"erc" : [[0,68],[69,200]],
-				"fm" : [[0,100],[11,100]]
-			},
-			"yellow1": {
-				"erc" : [[69,79],[80,200]],
-				"fm" : [[0,10],[8,10]]
-			},
-			"brown1" : {
-				"erc" : [80,94],
-				"fm" : [0,7]
-			}
-		},
 	"name": "Payette",
 	"RAWS": {
 		"101044": {
 			"name": "Lodgepole",
 			"lat": 45.378,
 			"lon": -115.188,
-			"elevation":5814,
+			"elevation": 5814,
 			"highest": 85,
 			"p97": 74,
 			"p90": 68,
@@ -54,8 +40,8 @@
 		},
 		"101220": {
 			"name": "Teapot",
-			"lat": 44.9043300,
-			"lon": -115.7385800,
+			"lat": 44.9,
+			"lon": "",
 			"elevation": 5120,
 			"highest": "",
 			"p97": "",
@@ -80,7 +66,6 @@
 			"name": "Taylor Ranch",
 			"lat": 45.104,
 			"lon": -114.849,
-			"elevation": 3949,
 			"highest": 94,
 			"p97": 90,
 			"p90": 84,
@@ -103,20 +88,6 @@
 	}
 }, {
 	"PSA": "GB02",
-	"matrix":{
-			"green1":{
-				"erc" : [[0,67],[68,200]],
-				"fm" : [[0,200],[10,200]]
-			},
-			"yellow1": {
-				"erc" : [[68,80],[81,200]],
-				"fm" : [[0,9],[7,9]]
-			},
-			"brown1" : {
-				"erc" : [81,200],
-				"fm" : [0,7]
-			}
-		},
 	"name": "Central Idaho",
 	"RAWS": {
 		"101303": {
@@ -205,9 +176,9 @@
 		},
 		"101803": {
 			"name": "Challis",
-			"lat": 44.8330000,
-			"lon": -114.3330000,
-			"elevation": 5171,
+			"lat": "",
+			"lon": "",
+			"elevation": "",
 			"highest": "",
 			"p97": "",
 			"p90": "",
@@ -231,20 +202,6 @@
 }, {
 	"PSA": "GB03",
 	"name": "SW Idaho",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,78],[79,200]],
-        "fm" : [[3,100],[9,100]]
-      },
-      "yellow1": {
-        "erc" : [[79,88],[79,200]],
-        "fm" : [[0,8],[7,8]]
-      },
-      "brown1" : {
-        "erc" : [89,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"102601": {
 			"name": "Boise",
@@ -310,7 +267,7 @@
 			"name": "Sho-Pai",
 			"lat": 42.02,
 			"lon": -116.211,
-			"elevation": "",
+			"elevation": 5375,
 			"highest": 98,
 			"p97": 91,
 			"p90": 89,
@@ -322,26 +279,12 @@
 }, {
 	"PSA": "GB04",
 	"name": "Boise Mtns",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,82],[83,201]],
-        "fm" : [[0,17],[8,200]]
-      },
-      "yellow1": {
-        "erc" : [[83,88],[89,200]],
-        "fm" : [[0,7],[7,7]]
-      },
-      "brown1" : {
-        "erc" : [89,101],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"101222": {
 			"name": "Pine Creek Pass",
 			"lat": 44.25,
 			"lon": -116.183,
-			"elevation": "",
+			"elevation": 5600,
 			"highest": 100,
 			"p97": 92,
 			"p90": 88,
@@ -353,7 +296,7 @@
 			"name": "Town Creek",
 			"lat": 43.944,
 			"lon": -115.917,
-			"elevation": "",
+			"elevation": 4500,
 			"highest": 99,
 			"p97": 87,
 			"p90": 83,
@@ -365,7 +308,7 @@
 			"name": "Little Anderson",
 			"lat": 44.091,
 			"lon": -115.881,
-			"elevation": "",
+			"elevation": 4560,
 			"highest": 102,
 			"p97": 90,
 			"p90": 86,
@@ -377,7 +320,7 @@
 			"name": "Wagon Town",
 			"lat": 43.573,
 			"lon": -115.327,
-			"elevation": "",
+			"elevation": 6200,
 			"highest": 104,
 			"p97": 97,
 			"p90": 92,
@@ -389,26 +332,12 @@
 }, {
 	"PSA": "GB05",
 	"name": "Northern Sawtooth",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,68],[69,200]],
-        "fm" : [[0,100],[9,200]]
-      },
-      "yellow1": {
-        "erc" : [[69,75],[76,200]],
-        "fm" : [[0,8],[8,8]]
-      },
-      "brown1" : {
-        "erc" : [76,200],
-        "fm" : [0,7]
-      }
-    },
 	"RAWS": {
 		"101809": {
 			"name": "Stanley Ranger",
 			"lat": 44.169,
 			"lon": -114.926,
-			"elevation": "",
+			"elevation": 6523,
 			"highest": 85,
 			"p97": 75,
 			"p90": 71,
@@ -416,12 +345,23 @@
 			"p70": 57,
 			"p50": 50
 		},
-		"101812": "Horton Peak",
+		"101812": {
+			"name": "Horton Peak",
+			"lat": 43.9,
+			"lon": "",
+			"elevation": 8800,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
 		"102802": {
 			"name": "Fleck Summit",
 			"lat": 43.62,
 			"lon": -114.899,
-			"elevation": "",
+			"elevation": 6482,
 			"highest": 98,
 			"p97": 90,
 			"p90": 86,
@@ -433,7 +373,7 @@
 			"name": "North Fork",
 			"lat": 43.79,
 			"lon": -114.421,
-			"elevation": "",
+			"elevation": 6290,
 			"highest": 88,
 			"p97": 84,
 			"p90": 80,
@@ -445,26 +385,12 @@
 }, {
 	"PSA": "GB06",
 	"name": "Magic Valley",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,79],[80,200]],
-        "fm" : [[0,18],[9,100]]
-      },
-      "yellow1": {
-        "erc" : [[80,87],[88,200]],
-        "fm" : [[0,8],[7,8]]
-      },
-      "brown1" : {
-        "erc" : [88,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"102711": {
 			"name": "Deer Haven",
 			"lat": 43.174,
 			"lon": -115.152,
-			"elevation": "",
+			"elevation": 5550,
 			"highest": 110,
 			"p97": 102,
 			"p90": 97,
@@ -476,7 +402,7 @@
 			"name": "Potter Butte",
 			"lat": 43.226,
 			"lon": -113.574,
-			"elevation": "",
+			"elevation": 4940,
 			"highest": 111,
 			"p97": 98,
 			"p90": 93,
@@ -488,7 +414,7 @@
 			"name": "Horse Butte",
 			"lat": 42.418,
 			"lon": -115.202,
-			"elevation": "",
+			"elevation": 5000,
 			"highest": 106,
 			"p97": 98,
 			"p90": 95,
@@ -500,7 +426,7 @@
 			"name": "Twin Butte",
 			"lat": 42.691,
 			"lon": -115.195,
-			"elevation": "",
+			"elevation": 3330,
 			"highest": 107,
 			"p97": 99,
 			"p90": 96,
@@ -512,7 +438,7 @@
 			"name": "Rock Lake",
 			"lat": 42.973,
 			"lon": -114.064,
-			"elevation": "",
+			"elevation": 4250,
 			"highest": 103,
 			"p97": 94,
 			"p90": 90,
@@ -524,7 +450,7 @@
 			"name": "Raft River",
 			"lat": 42.548,
 			"lon": -113.259,
-			"elevation":4501,
+			"elevation": 4400,
 			"highest": 90,
 			"p97": 82,
 			"p90": 79,
@@ -536,26 +462,12 @@
 }, {
 	"PSA": "GB07",
 	"name": "Southern Sawtooth",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,77],[78,200]],
-        "fm" : [[0,18],[9,190]]
-      },
-      "yellow1": {
-        "erc" : [[78,84],[85,200]],
-        "fm" : [[0,8],[7,8]]
-      },
-      "brown1" : {
-        "erc" : [85,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"104004": {
 			"name": "Trail Gulch",
 			"lat": 42.3,
 			"lon": -114.317,
-			"elevation": "",
+			"elevation": 5600,
 			"highest": 101,
 			"p97": 96,
 			"p90": 92,
@@ -567,7 +479,7 @@
 			"name": "Bull Springs",
 			"lat": 42.083,
 			"lon": -114.483,
-			"elevation": "",
+			"elevation": 5700,
 			"highest": 91,
 			"p97": 84,
 			"p90": 79,
@@ -579,7 +491,7 @@
 			"name": "Moberg Canyon",
 			"lat": 42.02,
 			"lon": -113.09,
-			"elevation": "",
+			"elevation": 6571,
 			"highest": 103,
 			"p97": 96,
 			"p90": 91,
@@ -591,7 +503,7 @@
 			"name": "Goose Creek",
 			"lat": 42.095,
 			"lon": -113.896,
-			"elevation": "",
+			"elevation": 5660,
 			"highest": 100,
 			"p97": 92,
 			"p90": 88,
@@ -603,26 +515,12 @@
 }, {
 	"PSA": "GB08",
 	"name": "Upper Snake River",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,72],[73,200]],
-        "fm" : [[0,19],[10,100]]
-      },
-      "yellow1": {
-        "erc" : [[73,84],[85,200]],
-        "fm" : [[0,9],[7,9]]
-      },
-      "brown1" : {
-        "erc" : [85,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"103703": {
 			"name": "Crystal",
 			"lat": 42.983,
 			"lon": -113.167,
-			"elevation": "",
+			"elevation": 5064,
 			"highest": 103,
 			"p97": 94,
 			"p90": 90,
@@ -634,7 +532,7 @@
 			"name": "Grace",
 			"lat": 42.537,
 			"lon": -111.855,
-			"elevation": "",
+			"elevation": 6210,
 			"highest": 98,
 			"p97": 91,
 			"p90": 86,
@@ -646,7 +544,7 @@
 			"name": "Pole Canyon",
 			"lat": 42.894,
 			"lon": -111.841,
-			"elevation": "",
+			"elevation": 6700,
 			"highest": 96,
 			"p97": 89,
 			"p90": 84,
@@ -658,7 +556,7 @@
 			"name": "Bull Springs",
 			"lat": 42.083,
 			"lon": -114.483,
-			"elevation": "",
+			"elevation": 5700,
 			"highest": 91,
 			"p97": 84,
 			"p90": 79,
@@ -670,7 +568,7 @@
 			"name": "Flint Creek",
 			"lat": 42.079,
 			"lon": -112.183,
-			"elevation": "",
+			"elevation": 5200,
 			"highest": 115,
 			"p97": 99,
 			"p90": 93,
@@ -682,26 +580,12 @@
 }, {
 	"PSA": "GB09",
 	"name": "Eastern Idaho Highlands",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,65],[66,200]],
-        "fm" : [[0,200],[10,200]]
-      },
-      "yellow1": {
-        "erc" : [[66,73],[74,200]],
-        "fm" : [[0,9],[8,9]]
-      },
-      "brown1" : {
-        "erc" : [74,200],
-        "fm" : [0,7]
-      }
-    },
 	"RAWS": {
 		"102004": {
 			"name": "3 Mile",
 			"lat": 44.396,
 			"lon": -112.108,
-			"elevation": "",
+			"elevation": 6625,
 			"highest": 90,
 			"p97": 84,
 			"p90": 78,
@@ -713,7 +597,7 @@
 			"name": "Moody",
 			"lat": 43.65,
 			"lon": -111.576,
-			"elevation": "",
+			"elevation": 7040,
 			"highest": 95,
 			"p97": 84,
 			"p90": 79,
@@ -723,41 +607,38 @@
 		},
 		"103904": {
 			"name": "Diamond Flat",
-			"lat": 43.65,
-			"lon": -111.576,
+			"lat": 42.8,
+			"lon": "",
 			"elevation": 7500,
-			"highest": 95,
-			"p97": 84,
-			"p90": 79,
-			"p80": 74,
-			"p70": 69,
-			"p50": 63
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
 		}
 	}
 }, {
 	"PSA": "GB10",
 	"name": "Western Wyoming",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,56],[57,200]],
-        "fm" : [[0,200],[12,200]]
-      },
-      "yellow1": {
-        "erc" : [[57,66],[67,200]],
-        "fm" : [[0,11],[9,11]]
-      },
-      "brown1" : {
-        "erc" : [67,200],
-        "fm" : [0,8]
-      }
-    },
 	"RAWS": {
-		"100708": "Kelly",
+		"100708": {
+			"name": "Kelly",
+			"lat": 46.7,
+			"lon": "",
+			"elevation": 2737,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
 		"480707": {
 			"name": "Burro Hill",
 			"lat": 43.84,
 			"lon": -110.371,
-			"elevation": "",
+			"elevation": 7160,
 			"highest": 81,
 			"p97": 77,
 			"p90": 71,
@@ -769,7 +650,7 @@
 			"name": "Grand Teton",
 			"lat": 43.724,
 			"lon": -110.71,
-			"elevation": "",
+			"elevation": 6730,
 			"highest": 78,
 			"p97": 73,
 			"p90": 65,
@@ -777,12 +658,23 @@
 			"p70": 55,
 			"p50": 47
 		},
-		"480709": "Coyote Meadows",
+		"480709": {
+			"name": "Coyote Meadows",
+			"lat": 44,
+			"lon": "",
+			"elevation": 6572,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
 		"481302": {
 			"name": "Hoback",
 			"lat": 43.22,
 			"lon": -110.423,
-			"elevation": "",
+			"elevation": 6726,
 			"highest": 53,
 			"p97": 50,
 			"p90": 48,
@@ -794,7 +686,7 @@
 			"name": "Snider Basin",
 			"lat": 42.491,
 			"lon": -110.527,
-			"elevation": "",
+			"elevation": 8038,
 			"highest": 73,
 			"p97": 65,
 			"p90": 55,
@@ -806,7 +698,7 @@
 			"name": "Raspberry",
 			"lat": 43.472,
 			"lon": -110.018,
-			"elevation": "",
+			"elevation": 8800,
 			"highest": 79,
 			"p97": 72,
 			"p90": 65,
@@ -818,26 +710,12 @@
 }, {
 	"PSA": "GB11",
 	"name": "Southern Sierra Front",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,81],[82,200]],
-        "fm" : [[0,200],[8,100]]
-      },
-      "yellow1": {
-        "erc" : [[82,93],[94,200]],
-        "fm" : [[0,7],[6,7]]
-      },
-      "brown1" : {
-        "erc" : [94,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
 		"42802": {
 			"name": "Markleville",
 			"lat": 38.685,
 			"lon": -119.768,
-			"elevation": "",
+			"elevation": 5501,
 			"highest": 101,
 			"p97": 97,
 			"p90": 93,
@@ -849,7 +727,7 @@
 			"name": "Walker",
 			"lat": 38.57,
 			"lon": -119.455,
-			"elevation": "",
+			"elevation": 5680,
 			"highest": 110,
 			"p97": 106,
 			"p90": 103,
@@ -857,32 +735,40 @@
 			"p70": 98,
 			"p50": 94
 		},
-		"260117": "Knox 2",
-		"437202": "Bridgeport"
+		"260117": {
+			"name": "Knox 2",
+			"lat": 39.2,
+			"lon": "",
+			"elevation": 7553,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
+		"437202": {
+			"name": "Bridgeport",
+			"lat": "",
+			"lon": "",
+			"elevation": "",
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		}
 	}
 }, {
 	"PSA": "GB12",
 	"name": "Northern Sierra Front",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,79],[80,200]],
-        "fm" : [[0,100],[9,100]]
-      },
-      "yellow1": {
-        "erc" : [[80,86],[87,200]],
-        "fm" : [[0,8],[7,8]]
-      },
-      "brown1" : {
-        "erc" : [87,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"40724": {
 			"name": "Doyle",
 			"lat": 40.059,
 			"lon": -120.094,
-			"elevation": 4288,
+			"elevation": 4240,
 			"highest": 106,
 			"p97": 100,
 			"p90": 96,
@@ -894,7 +780,7 @@
 			"name": "Dog Valley",
 			"lat": 39.572,
 			"lon": -120.038,
-			"elevation": 6175,
+			"elevation": 5880,
 			"highest": 97,
 			"p97": 92,
 			"p90": 87,
@@ -906,7 +792,7 @@
 			"name": "Galena",
 			"lat": 39.382,
 			"lon": -119.815,
-			"elevation": "",
+			"elevation": 5800,
 			"highest": 105,
 			"p97": 100,
 			"p90": 97,
@@ -918,7 +804,7 @@
 			"name": "Desert Springs",
 			"lat": 39.674,
 			"lon": -119.768,
-			"elevation": "",
+			"elevation": 5280,
 			"highest": 110,
 			"p97": 104,
 			"p90": 100,
@@ -930,7 +816,7 @@
 			"name": "Fish Springs",
 			"lat": 38.925,
 			"lon": -119.641,
-			"elevation": "",
+			"elevation": 5120,
 			"highest": 112,
 			"p97": 106,
 			"p90": 100,
@@ -942,26 +828,12 @@
 }, {
 	"PSA": "GB13",
 	"name": "Lahontan Basin",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,83],[84,200]],
-        "fm" : [[0,200],[7,200]]
-      },
-      "yellow1": {
-        "erc" : [[84,90],[91,200]],
-        "fm" : [[0,6],[5,6]]
-      },
-      "brown1" : {
-        "erc" : [91,200],
-        "fm" : [0,4]
-      }
-    },
 	"RAWS": {
 		"260504": {
 			"name": "Red Butte",
 			"lat": 39.65,
 			"lon": -117.317,
-			"elevation": 4993,
+			"elevation": 5050,
 			"highest": 114,
 			"p97": 108,
 			"p90": 105,
@@ -973,7 +845,7 @@
 			"name": "Dead Camel",
 			"lat": 39.256,
 			"lon": -118.96,
-			"elevation": "",
+			"elevation": 4490,
 			"highest": 113,
 			"p97": 106,
 			"p90": 103,
@@ -985,27 +857,24 @@
 }, {
 	"PSA": "GB14",
 	"name": "Northwest Nevada",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,88],[89,200]],
-        "fm" : [[0,200],[9,200]]
-      },
-      "yellow1": {
-        "erc" : [[89,94],[95,200]],
-        "fm" : [[0,8],[6,8]]
-      },
-      "brown1" : {
-        "erc" : [95,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
-		"260112": "Juniper Springs",
+		"260112": {
+			"name": "Juniper Springs",
+			"lat": 41,
+			"lon": "",
+			"elevation": 5348,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
 		"260202": {
 			"name": "Bluewing",
 			"lat": 40.335,
 			"lon": -119.09,
-			"elevation": "",
+			"elevation": 4570,
 			"highest": 113,
 			"p97": 107,
 			"p90": 105,
@@ -1017,7 +886,7 @@
 			"name": "Dry Canyon",
 			"lat": 41.492,
 			"lon": -119.117,
-			"elevation": "",
+			"elevation": 4900,
 			"highest": 110,
 			"p97": 104,
 			"p90": 101,
@@ -1029,7 +898,7 @@
 			"name": "Morey Creek",
 			"lat": 41.456,
 			"lon": -117.633,
-			"elevation": "",
+			"elevation": 5500,
 			"highest": 122,
 			"p97": 110,
 			"p90": 105,
@@ -1041,7 +910,7 @@
 			"name": "Texas Spring",
 			"lat": 41.802,
 			"lon": -118.451,
-			"elevation": "",
+			"elevation": 5760,
 			"highest": 112,
 			"p97": 105,
 			"p90": 102,
@@ -1053,7 +922,7 @@
 			"name": "Double H",
 			"lat": 41.652,
 			"lon": -118.044,
-			"elevation": "",
+			"elevation": 6380,
 			"highest": 105,
 			"p97": 101,
 			"p90": 96,
@@ -1065,7 +934,7 @@
 			"name": "Majuba",
 			"lat": 40.773,
 			"lon": -118.52,
-			"elevation": "",
+			"elevation": 5293,
 			"highest": 105,
 			"p97": 102,
 			"p90": 99,
@@ -1073,32 +942,40 @@
 			"p70": 91,
 			"p50": 85
 		},
-		"": "Buffalo Creek"
+		"": {
+			"name": "Buffalo Creek",
+			"lat": "",
+			"lon": "",
+			"elevation": "",
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		}
 	}
 }, {
 	"PSA": "GB15",
 	"name": "Central Nevada Mountains",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,88],[89,200]],
-        "fm" : [[0,200],[9,200]]
-      },
-      "yellow1": {
-        "erc" : [[89,94],[95,200]],
-        "fm" : [[0,8],[6,8]]
-      },
-      "brown1" : {
-        "erc" : [95,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
-		"260501": "Austin",
+		"260501": {
+			"name": "Austin",
+			"lat": 39.4,
+			"lon": "",
+			"elevation": 6700,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
 		"260503": {
 			"name": "Desatoya",
 			"lat": 39.309,
 			"lon": -117.584,
-			"elevation": "",
+			"elevation": 6200,
 			"highest": 112,
 			"p97": 105,
 			"p90": 100,
@@ -1110,7 +987,7 @@
 			"name": "Combs Canyon",
 			"lat": 39.633,
 			"lon": -116.3,
-			"elevation": "",
+			"elevation": 6590,
 			"highest": 111,
 			"p97": 104,
 			"p90": 101,
@@ -1122,7 +999,7 @@
 			"name": "Coils Creek",
 			"lat": 39.833,
 			"lon": -116.492,
-			"elevation": "",
+			"elevation": 6800,
 			"highest": 107,
 			"p97": 102,
 			"p90": 98,
@@ -1134,27 +1011,24 @@
 }, {
 	"PSA": "GB16",
 	"name": "Central Nevada Desert",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,82],[83,200]],
-        "fm" : [[0,200],[9,200]]
-      },
-      "yellow1": {
-        "erc" : [[83,93],[94,200]],
-        "fm" : [[0,8],[6,8]]
-      },
-      "brown1" : {
-        "erc" : [94,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
-		"260810": "Quima Peak",
+		"260810": {
+			"name": "Quima Peak",
+			"lat": 38.4,
+			"lon": "",
+			"elevation": 7984,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
 		"261404": {
 			"name": "Pancake",
 			"lat": 38.304,
 			"lon": -116.193,
-			"elevation": "",
+			"elevation": 5200,
 			"highest": 119,
 			"p97": 113,
 			"p90": 106,
@@ -1166,7 +1040,7 @@
 			"name": "Buddy Adams",
 			"lat": 37.021,
 			"lon": -116.609,
-			"elevation": "",
+			"elevation": 4593,
 			"highest": 114,
 			"p97": 110,
 			"p90": 108,
@@ -1178,26 +1052,12 @@
 }, {
 	"PSA": "GB17",
 	"name": "West Elko",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,80],[81,200]],
-        "fm" : [[0,200],[9,200]]
-      },
-      "yellow1": {
-        "erc" : [[81,92],[93,200]],
-        "fm" : [[0,8],[6,8]]
-      },
-      "brown1" : {
-        "erc" : [93,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
 		"260305": {
 			"name": "Long Hollow",
 			"lat": 41.554,
 			"lon": -116.231,
-			"elevation": "",
+			"elevation": 5820,
 			"highest": 109,
 			"p97": 103,
 			"p90": 99,
@@ -1209,7 +1069,7 @@
 			"name": "Antelope Lake",
 			"lat": 41.685,
 			"lon": -116.764,
-			"elevation": "",
+			"elevation": 5460,
 			"highest": 110,
 			"p97": 104,
 			"p90": 100,
@@ -1221,7 +1081,7 @@
 			"name": "Beacon Light",
 			"lat": 40.558,
 			"lon": -116.758,
-			"elevation": "",
+			"elevation": 4800,
 			"highest": 116,
 			"p97": 111,
 			"p90": 108,
@@ -1233,26 +1093,12 @@
 }, {
 	"PSA": "GB18",
 	"name": "Jarbridge",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,73],[74,200]],
-        "fm" : [[0,200],[10,209]]
-      },
-      "yellow1": {
-        "erc" : [[74,86],[87,200]],
-        "fm" : [[0,9],[7,9]]
-      },
-      "brown1" : {
-        "erc" : [87,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"260305": {
 			"name": "Long Hollow",
 			"lat": 41.554,
 			"lon": -116.231,
-			"elevation": "",
+			"elevation": 5820,
 			"highest": 109,
 			"p97": 103,
 			"p90": 99,
@@ -1264,7 +1110,7 @@
 			"name": "Rock Spring Creek",
 			"lat": 41.643,
 			"lon": -114.643,
-			"elevation": "",
+			"elevation": 5380,
 			"highest": 99,
 			"p97": 94,
 			"p90": 88,
@@ -1276,7 +1122,7 @@
 			"name": "Stag Mountain",
 			"lat": 41.518,
 			"lon": -115.393,
-			"elevation": "",
+			"elevation": 6790,
 			"highest": 101,
 			"p97": 96,
 			"p90": 93,
@@ -1288,26 +1134,12 @@
 }, {
 	"PSA": "GB19",
 	"name": "Ruby",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,77],[78,200]],
-        "fm" : [[0,200],[10,200]]
-      },
-      "yellow1": {
-        "erc" : [[78,88],[89,200]],
-        "fm" : [[0,9],[7,9]]
-      },
-      "brown1" : {
-        "erc" : [89,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"260306": {
 			"name": "Spruce Mountain",
 			"lat": 40.44,
 			"lon": -114.811,
-			"elevation": "",
+			"elevation": 6100,
 			"highest": 115,
 			"p97": 110,
 			"p90": 103,
@@ -1319,7 +1151,7 @@
 			"name": "Spring Gulch",
 			"lat": 40.593,
 			"lon": -114.203,
-			"elevation": "",
+			"elevation": 5500,
 			"highest": 111,
 			"p97": 104,
 			"p90": 99,
@@ -1331,7 +1163,7 @@
 			"name": "Crane Springs",
 			"lat": 40.46,
 			"lon": -115.85,
-			"elevation": "",
+			"elevation": 6400,
 			"highest": 107,
 			"p97": 103,
 			"p90": 98,
@@ -1343,26 +1175,12 @@
 }, {
 	"PSA": "GB20",
 	"name": "Ely North",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,78],[78,200]],
-        "fm" : [[0,200],[9,200]]
-      },
-      "yellow1": {
-        "erc" : [[79,95],[96,200]],
-        "fm" : [[0,8],[6,8]]
-      },
-      "brown1" : {
-        "erc" : [96,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
 		"260804": {
 			"name": "Alligator Ridge",
 			"lat": 39.737,
 			"lon": -115.518,
-			"elevation": "",
+			"elevation": 6560,
 			"highest": 111,
 			"p97": 104,
 			"p90": 99,
@@ -1374,7 +1192,7 @@
 			"name": "Cedar Pass",
 			"lat": 39.757,
 			"lon": -114.149,
-			"elevation": "",
+			"elevation": 7185,
 			"highest": 112,
 			"p97": 104,
 			"p90": 97,
@@ -1386,7 +1204,7 @@
 			"name": "Cattle Camp",
 			"lat": 38.904,
 			"lon": -114.814,
-			"elevation": "",
+			"elevation": 7300,
 			"highest": 108,
 			"p97": 98,
 			"p90": 92,
@@ -1398,7 +1216,7 @@
 			"name": "Currant Creek",
 			"lat": 38.767,
 			"lon": -115.417,
-			"elevation": "",
+			"elevation": 5580,
 			"highest": 117,
 			"p97": 111,
 			"p90": 106,
@@ -1410,26 +1228,12 @@
 }, {
 	"PSA": "GB21",
 	"name": "Ely South",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,77],[78,200]],
-        "fm" : [[0,200],[11,200]]
-      },
-      "yellow1": {
-        "erc" : [[78,84],[85,200]],
-        "fm" : [[0,10],[8,10]]
-      },
-      "brown1" : {
-        "erc" : [85,200],
-        "fm" : [0,7]
-      }
-    },
 	"RAWS": {
 		"261603": {
 			"name": "Coyote Wash",
 			"lat": 38.283,
 			"lon": -114.758,
-			"elevation": "",
+			"elevation": 5720,
 			"highest": 115,
 			"p97": 108,
 			"p90": 101,
@@ -1441,7 +1245,7 @@
 			"name": "Kane Springs",
 			"lat": 37.25,
 			"lon": -114.708,
-			"elevation": "",
+			"elevation": 4590,
 			"highest": 122,
 			"p97": 118,
 			"p90": 112,
@@ -1453,7 +1257,7 @@
 			"name": "Immigration Wash",
 			"lat": 37.921,
 			"lon": -114.16,
-			"elevation": "",
+			"elevation": 6230,
 			"highest": 115,
 			"p97": 108,
 			"p90": 100,
@@ -1465,26 +1269,12 @@
 }, {
 	"PSA": "GB22",
 	"name": "Amargosa",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,84],[85,200]],
-        "fm" : [[0,200],[10,200]]
-      },
-      "yellow1": {
-        "erc" : [[85,94],[95,200]],
-        "fm" : [[0,9],[7,9]]
-      },
-      "brown1" : {
-        "erc" : [95,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"261408": {
 			"name": "Buddy Adams",
 			"lat": 37.021,
 			"lon": -116.609,
-			"elevation": "",
+			"elevation": 4593,
 			"highest": 114,
 			"p97": 110,
 			"p90": 108,
@@ -1496,26 +1286,12 @@
 }, {
 	"PSA": "GB23",
 	"name": "Spring Mountain",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,81],[82,200]],
-        "fm" : [[0,200],[10,200]]
-      },
-      "yellow1": {
-        "erc" : [[82,92],[93,200]],
-        "fm" : [[0,9],[6,9]]
-      },
-      "brown1" : {
-        "erc" : [93,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
 		"261702": {
 			"name": "Kyle Canyon",
 			"lat": 36.267,
 			"lon": -115.6,
-			"elevation": "",
+			"elevation": 7200,
 			"highest": 127,
 			"p97": 112,
 			"p90": 105,
@@ -1527,7 +1303,7 @@
 			"name": "Mountain Springs",
 			"lat": 36.333,
 			"lon": -115.867,
-			"elevation": "",
+			"elevation": 5440,
 			"highest": 115,
 			"p97": 107,
 			"p90": 103,
@@ -1539,26 +1315,12 @@
 }, {
 	"PSA": "GB24",
 	"name": "Southern Nevada Desert",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,89],[90,200]],
-        "fm" : [[0,200],[8,200]]
-      },
-      "yellow1": {
-        "erc" : [[90,96],[97,200]],
-        "fm" : [[0,7],[6,7]]
-      },
-      "brown1" : {
-        "erc" : [97,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
-		"101316": {
+		"261705": {
 			"name": "Red Rock",
 			"lat": 44.988,
 			"lon": -114.418,
-			"elevation": "",
+			"elevation": 7910,
 			"highest": 98,
 			"p97": 91,
 			"p90": 86,
@@ -1570,26 +1332,12 @@
 }, {
 	"PSA": "GB25",
 	"name": "Northwest Utah",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,76],[77,200]],
-        "fm" : [[0,200],[8,200]]
-      },
-      "yellow1": {
-        "erc" : [[77,86],[87,200]],
-        "fm" : [[0,7],[77,77]]
-      },
-      "brown1" : {
-        "erc" : [87,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"420403": {
 			"name": "Bues Canyon",
 			"lat": 41.18,
 			"lon": -111.931,
-			"elevation": "",
+			"elevation": 5100,
 			"highest": 95,
 			"p97": 88,
 			"p90": 84,
@@ -1601,7 +1349,7 @@
 			"name": "Cedar Mountain",
 			"lat": 40.301,
 			"lon": -112.777,
-			"elevation": "",
+			"elevation": 4820,
 			"highest": 107,
 			"p97": 101,
 			"p90": 93,
@@ -1613,7 +1361,7 @@
 			"name": "Vernon",
 			"lat": 40.099,
 			"lon": -112.427,
-			"elevation": "",
+			"elevation": 5500,
 			"highest": 102,
 			"p97": 97,
 			"p90": 89,
@@ -1625,7 +1373,7 @@
 			"name": "Aragonite",
 			"lat": 40.597,
 			"lon": -113.021,
-			"elevation": "",
+			"elevation": 5080,
 			"highest": 108,
 			"p97": 105,
 			"p90": 100,
@@ -1637,7 +1385,7 @@
 			"name": "Rosebud",
 			"lat": 41.61,
 			"lon": -113.591,
-			"elevation": "",
+			"elevation": 5040,
 			"highest": 109,
 			"p97": 100,
 			"p90": 95,
@@ -1649,7 +1397,7 @@
 			"name": "Clifton Flat",
 			"lat": 40.113,
 			"lon": -113.876,
-			"elevation": "",
+			"elevation": 6384,
 			"highest": 104,
 			"p97": 100,
 			"p90": 97,
@@ -1661,7 +1409,7 @@
 			"name": "Pleasant Grove",
 			"lat": 40.431,
 			"lon": -111.75,
-			"elevation": "",
+			"elevation": 5200,
 			"highest": 105,
 			"p97": 95,
 			"p90": 91,
@@ -1673,26 +1421,12 @@
 }, {
 	"PSA": "GB26",
 	"name": "Uinta-Wasatch",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,69],[70,200]],
-        "fm" : [[0,100],[9,100]]
-      },
-      "yellow1": {
-        "erc" : [[70,74],[75,200]],
-        "fm" : [[0,8],[7,8]]
-      },
-      "brown1" : {
-        "erc" : [75,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"420706": {
 			"name": "Norway Flat",
 			"lat": 40.55,
 			"lon": -111.067,
-			"elevation": "",
+			"elevation": 8200,
 			"highest": 87,
 			"p97": 76,
 			"p90": 90,
@@ -1704,7 +1438,7 @@
 			"name": "Otter Creek",
 			"lat": 41.753,
 			"lon": -111.281,
-			"elevation": "",
+			"elevation": 7160,
 			"highest": 104,
 			"p97": 92,
 			"p90": 90,
@@ -1716,7 +1450,7 @@
 			"name": "Pleasant Grove",
 			"lat": 40.431,
 			"lon": -111.75,
-			"elevation": "",
+			"elevation": 5200,
 			"highest": 105,
 			"p97": 95,
 			"p90": 91,
@@ -1728,7 +1462,7 @@
 			"name": "Rays Valley",
 			"lat": 40.118,
 			"lon": -111.275,
-			"elevation": "",
+			"elevation": 7300,
 			"highest": 95,
 			"p97": 85,
 			"p90": 78,
@@ -1740,26 +1474,12 @@
 }, {
 	"PSA": "GB27",
 	"name": "Central Utah",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,83],[84,200]],
-        "fm" : [[0,200],[7,200]]
-      },
-      "yellow1": {
-        "erc" : [[84,88],[89,200]],
-        "fm" : [[0,6],[6,6]]
-      },
-      "brown1" : {
-        "erc" : [89,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
 		"421501": {
 			"name": "Sevier Reservoir",
 			"lat": 39.583,
 			"lon": -112,
-			"elevation": "",
+			"elevation": 5330,
 			"highest": 107,
 			"p97": 103,
 			"p90": 95,
@@ -1771,7 +1491,7 @@
 			"name": "Mud Spring",
 			"lat": 39.799,
 			"lon": -112.272,
-			"elevation": "",
+			"elevation": 5760,
 			"highest": 105,
 			"p97": 97,
 			"p90": 91,
@@ -1783,7 +1503,7 @@
 			"name": "Tule Valley",
 			"lat": 39.35,
 			"lon": -113.367,
-			"elevation": "",
+			"elevation": 5200,
 			"highest": 117,
 			"p97": 107,
 			"p90": 104,
@@ -1795,26 +1515,12 @@
 }, {
 	"PSA": "GB28",
 	"name": "Fishlake-Henry Mountain",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,77],[78,200]],
-        "fm" : [[0,200],[9,200]]
-      },
-      "yellow1": {
-        "erc" : [[78,88],[89,200]],
-        "fm" : [[0,8],[6,8]]
-      },
-      "brown1" : {
-        "erc" : [89,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
 		"421807": {
 			"name": "Horse Hollow",
 			"lat": 38.664,
 			"lon": -112.683,
-			"elevation": "",
+			"elevation": 6010,
 			"highest": 113,
 			"p97": 97,
 			"p90": 95,
@@ -1826,7 +1532,7 @@
 			"name": "Lost Creek",
 			"lat": 38.771,
 			"lon": -111.863,
-			"elevation": "",
+			"elevation": 7400,
 			"highest": 107,
 			"p97": 95,
 			"p90": 86,
@@ -1838,7 +1544,7 @@
 			"name": "Larb Hollow",
 			"lat": 38.016,
 			"lon": -111.32,
-			"elevation": "",
+			"elevation": 8490,
 			"highest": 115,
 			"p97": 100,
 			"p90": 90,
@@ -1850,7 +1556,7 @@
 			"name": "Henry Mountain",
 			"lat": 38.034,
 			"lon": -110.825,
-			"elevation": "",
+			"elevation": 8294,
 			"highest": 109,
 			"p97": 99,
 			"p90": 91,
@@ -1862,26 +1568,12 @@
 }, {
 	"PSA": "GB29",
 	"name": "Uinta Basin",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,69],[70,200]],
-        "fm" : [[0,200],[11,200]]
-      },
-      "yellow1": {
-        "erc" : [[70,76],[77,200]],
-        "fm" : [[0,10],[8,10]]
-      },
-      "brown1" : {
-        "erc" : [77,200],
-        "fm" : [0,7]
-      }
-    },
 	"RAWS": {
 		"421301": {
 			"name": "Yellowstone",
 			"lat": 40.544,
 			"lon": -110.33,
-			"elevation": "",
+			"elevation": 7800,
 			"highest": 103,
 			"p97": 93,
 			"p90": 84,
@@ -1893,7 +1585,7 @@
 			"name": "Five Mile",
 			"lat": 39.881,
 			"lon": -110.266,
-			"elevation": "",
+			"elevation": 7480,
 			"highest": 110,
 			"p97": 99,
 			"p90": 91,
@@ -1905,7 +1597,7 @@
 			"name": "Horse Ridge",
 			"lat": 39.934,
 			"lon": -110.861,
-			"elevation": "",
+			"elevation": 8480,
 			"highest": 101,
 			"p97": 92,
 			"p90": 84,
@@ -1913,13 +1605,35 @@
 			"p70": 74,
 			"p50": 67
 		},
-		"421406": "Upper PR Canyon",
-		"421407": "Winter Ridge",
+		"421406": {
+			"name": "Upper PR Canyon",
+			"lat": 39.4,
+			"lon": "",
+			"elevation": 8269,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
+		"421407": {
+			"name": "Winter Ridge",
+			"lat": 39.5,
+			"lon": "",
+			"elevation": 7340,
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
+		},
 		"421415": {
 			"name": "Fort Duchesne",
 			"lat": 40.285,
 			"lon": -109.862,
-			"elevation": "",
+			"elevation": 4928,
 			"highest": 102,
 			"p97": 95,
 			"p90": 87,
@@ -1931,7 +1645,7 @@
 			"name": "Wildhorse",
 			"lat": 39.545,
 			"lon": -109.908,
-			"elevation": "",
+			"elevation": 8250,
 			"highest": 114,
 			"p97": 103,
 			"p90": 94,
@@ -1943,26 +1657,12 @@
 }, {
 	"PSA": "GB30",
 	"name": "Manti",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,66],[67,200]],
-        "fm" : [[0,200],[11,200]]
-      },
-      "yellow1": {
-        "erc" : [[67,78],[79,200]],
-        "fm" : [[0,10],[8,10]]
-      },
-      "brown1" : {
-        "erc" : [79,200],
-        "fm" : [0,7]
-      }
-    },
 	"RAWS": {
 		"421602": {
 			"name": "Joes Valley",
 			"lat": 39.309,
 			"lon": -111.323,
-			"elevation": "",
+			"elevation": 8700,
 			"highest": 105,
 			"p97": 99,
 			"p90": 89,
@@ -1974,26 +1674,12 @@
 }, {
 	"PSA": "GB31",
 	"name": "Castle",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,82],[83,200]],
-        "fm" : [[0,100],[8,200]]
-      },
-      "yellow1": {
-        "erc" : [[83,91],[92,200]],
-        "fm" : [[0,7],[7,7]]
-      },
-      "brown1" : {
-        "erc" : [92,200],
-        "fm" : [0,6]
-      }
-    },
 	"RAWS": {
 		"421405": {
 			"name": "McCook",
 			"lat": 39.634,
 			"lon": -109.265,
-			"elevation": "",
+			"elevation": 6700,
 			"highest": 107,
 			"p97": 98,
 			"p90": 91,
@@ -2005,7 +1691,7 @@
 			"name": "Bruin Point",
 			"lat": 39.608,
 			"lon": -110.292,
-			"elevation": "",
+			"elevation": 9700,
 			"highest": 97,
 			"p97": 91,
 			"p90": 82,
@@ -2017,7 +1703,7 @@
 			"name": "Flat Top",
 			"lat": 39.338,
 			"lon": -110.6,
-			"elevation": "",
+			"elevation": 6120,
 			"highest": 115,
 			"p97": 105,
 			"p90": 99,
@@ -2029,7 +1715,7 @@
 			"name": "Bryson",
 			"lat": 39.275,
 			"lon": -109.217,
-			"elevation": "",
+			"elevation": 5320,
 			"highest": 115,
 			"p97": 104,
 			"p90": 97,
@@ -2041,26 +1727,12 @@
 }, {
 	"PSA": "GB32",
 	"name": "Canyon",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,70],[71,200]],
-        "fm" : [[0,100],[10,200]]
-      },
-      "yellow1": {
-        "erc" : [[71,90],[91,200]],
-        "fm" : [[0,9],[8,9]]
-      },
-      "brown1" : {
-        "erc" : [91,200],
-        "fm" : [2,7]
-      }
-    },
 	"RAWS": {
 		"422710": {
 			"name": "North Long Point",
 			"lat": 37.838,
 			"lon": -109.839,
-			"elevation": "",
+			"elevation": 8680,
 			"highest": 110,
 			"p97": 95,
 			"p90": 88,
@@ -2072,7 +1744,7 @@
 			"name": "Big Indian",
 			"lat": 38.221,
 			"lon": -109.279,
-			"elevation": "",
+			"elevation": 6960,
 			"highest": 115,
 			"p97": 103,
 			"p90": 96,
@@ -2084,7 +1756,7 @@
 			"name": "Kane Gulch",
 			"lat": 37.525,
 			"lon": -109.892,
-			"elevation": "",
+			"elevation": 6500,
 			"highest": 107,
 			"p97": 97,
 			"p90": 94,
@@ -2096,26 +1768,12 @@
 }, {
 	"PSA": "GB33",
 	"name": "Southwest Utah Desert",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,83],[84,200]],
-        "fm" : [[0,200],[7,200]]
-      },
-      "yellow1": {
-        "erc" : [[84,93],[94,200]],
-        "fm" : [[0,6],[6,6]]
-      },
-      "brown1" : {
-        "erc" : [94,200],
-        "fm" : [0,5]
-      }
-    },
 	"RAWS": {
 		"422203": {
 			"name": "Brimstone",
 			"lat": 38.308,
 			"lon": -113.385,
-			"elevation": "",
+			"elevation": 5719,
 			"highest": 116,
 			"p97": 105,
 			"p90": 97,
@@ -2127,7 +1785,7 @@
 			"name": "Jensen Spring",
 			"lat": 38.033,
 			"lon": -113.517,
-			"elevation": "",
+			"elevation": 5740,
 			"highest": 118,
 			"p97": 106,
 			"p90": 99,
@@ -2139,7 +1797,7 @@
 			"name": "Enterprise",
 			"lat": 37.559,
 			"lon": -113.717,
-			"elevation": "",
+			"elevation": 5340,
 			"highest": 112,
 			"p97": 100,
 			"p90": 91,
@@ -2151,26 +1809,12 @@
 }, {
 	"PSA": "GB34",
 	"name": "Dixie-Bryce",
-	"matrix":{
-      "green1":{
-        "erc" : [[0,70],[71,200]],
-        "fm" : [[0,200],[10,200]]
-      },
-      "yellow1": {
-        "erc" : [[71,80],[81,200]],
-        "fm" : [[0,9],[8,9]]
-      },
-      "brown1" : {
-        "erc" : [81,200],
-        "fm" : [0,7]
-      }
-    },
 	"RAWS": {
 		"422503": {
 			"name": "Cottonwood",
 			"lat": 37.984,
 			"lon": -112.639,
-			"elevation": "",
+			"elevation": 7500,
 			"highest": 109,
 			"p97": 103,
 			"p90": 97,
@@ -2182,7 +1826,7 @@
 			"name": "Assay Bench",
 			"lat": 37.5,
 			"lon": -112.5,
-			"elevation": "",
+			"elevation": 8100,
 			"highest": 108,
 			"p97": 95,
 			"p90": 87,
@@ -2194,7 +1838,7 @@
 			"name": "Buck Flat",
 			"lat": 37.9,
 			"lon": -111.683,
-			"elevation": "",
+			"elevation": 8000,
 			"highest": 114,
 			"p97": 103,
 			"p90": 92,
@@ -2206,7 +1850,7 @@
 			"name": "Tom Best",
 			"lat": 37.829,
 			"lon": -112.119,
-			"elevation": "",
+			"elevation": 7500,
 			"highest": 108,
 			"p97": 94,
 			"p90": 90,
@@ -2218,7 +1862,7 @@
 			"name": "Bryce Canyon",
 			"lat": 37.642,
 			"lon": -112.172,
-			"elevation": "",
+			"elevation": 7855,
 			"highest": 100,
 			"p97": 90,
 			"p90": 82,
@@ -2230,7 +1874,7 @@
 			"name": "Lava Point",
 			"lat": 37.392,
 			"lon": -113.039,
-			"elevation": "",
+			"elevation": 7890,
 			"highest": 95,
 			"p97": 86,
 			"p90": 80,
@@ -2241,30 +1885,13 @@
 	}
 }, {
 	"PSA": "GB35",
-	"matrix":{
-			"green":[[[61,1],[89,13]],[[90,7],[119,13]]],
-			"green1":{
-				"erc" : [[61,89],[90,119]],
-				"fm" : [[1,13],[7,13]]
-			},
-			"yellow": [[[90,1],[102,6]],[[103,5],[119,6]]],
-			"yellow1": {
-				"erc" : [[90,102],[103,119]],
-				"fm" : [[1,6],[5,6]]
-			},
-			"brown" : [[103,1],[119,8]],
-			"brown1" : {
-				"erc" : [103,119],
-				"fm" : [1,4]
-			}
-		},
 	"name": "Arizona Strip/Monuments",
 	"RAWS": {
 		"20107": {
 			"name": "Logan",
 			"lat": 36.353,
 			"lon": -113.199,
-			"elevation": "",
+			"elevation": 7630,
 			"highest": 116,
 			"p97": 103,
 			"p90": 97,
@@ -2276,7 +1903,7 @@
 			"name": "Olaf",
 			"lat": 36.5,
 			"lon": -113.817,
-			"elevation": "",
+			"elevation": 3200,
 			"highest": 124,
 			"p97": 117,
 			"p90": 113,
@@ -2288,7 +1915,7 @@
 			"name": "Tweedy",
 			"lat": 36.583,
 			"lon": -113.717,
-			"elevation": "",
+			"elevation": 5200,
 			"highest": 122,
 			"p97": 111,
 			"p90": 106,
@@ -2300,7 +1927,7 @@
 			"name": "Blackrock",
 			"lat": 36.79,
 			"lon": -113.747,
-			"elevation": "",
+			"elevation": 6457,
 			"highest": 119,
 			"p97": 104,
 			"p90": 98,
@@ -2312,7 +1939,7 @@
 			"name": "Gunsight",
 			"lat": 36.704,
 			"lon": -112.583,
-			"elevation": "",
+			"elevation": 5280,
 			"highest": 116,
 			"p97": 111,
 			"p90": 105,
@@ -2324,7 +1951,7 @@
 			"name": "White Reef",
 			"lat": 37.216,
 			"lon": -113.378,
-			"elevation": "",
+			"elevation": 3300,
 			"highest": 119,
 			"p97": 115,
 			"p90": 110,
@@ -2336,13 +1963,25 @@
 			"name": "Badger Spring",
 			"lat": 37.152,
 			"lon": -113.951,
-			"elevation": "",
+			"elevation": 3990,
 			"highest": 126,
 			"p97": 115,
 			"p90": 110,
 			"p80": 105,
 			"p70": 101,
 			"p50": 95
+		},
+		"": {
+			"name": "Buckskin",
+			"lat": "",
+			"lon": "",
+			"elevation": "",
+			"highest": "",
+			"p97": "",
+			"p90": "",
+			"p80": "",
+			"p70": "",
+			"p50": ""
 		}
 	}
 }]
